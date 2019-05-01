@@ -1,8 +1,8 @@
 package org.crazyit.ui;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.QuickContactBadge;
+		import android.app.Activity;
+		import android.os.Bundle;
+		import android.widget.QuickContactBadge;
 
 
 public class MainActivity extends Activity
@@ -16,7 +16,7 @@ public class MainActivity extends Activity
 		// 获取QuickContactBadge组件
 		badge = (QuickContactBadge) findViewById(R.id.badge);
 		// 将QuickContactBadge组件与特定电话号码对应的联系人建立关联
-		badge.assignContactFromPhone("020-88888888", false);
+		badge.assignContactFromPhone("18621083837", false);
 	}
 }
 

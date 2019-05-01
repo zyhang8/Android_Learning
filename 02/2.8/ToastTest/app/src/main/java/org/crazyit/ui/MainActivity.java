@@ -31,7 +31,7 @@ public class MainActivity extends Activity
 			{
 				// 创建一个Toast提示信息
 				Toast toast = Toast.makeText(MainActivity.this
-						, "简单的提示信息"
+						, "文字提示"
 						// 设置该Toast提示信息的持续时间
 						, Toast.LENGTH_SHORT);
 				toast.show();
@@ -50,14 +50,14 @@ public class MainActivity extends Activity
 				toast.setGravity(Gravity.CENTER, 0, 0);
 				// 创建一个ImageView
 				ImageView image = new ImageView(MainActivity.this);
-				image.setImageResource(R.drawable.tools);
+				image.setImageResource(R.drawable.a);
 				// 创建一个LinearLayout容器
 				LinearLayout ll = new LinearLayout(MainActivity.this);
 				// 向LinearLayout中添加图片、原有的View
 				ll.addView(image);
 				// 创建一个TextView
 				TextView textView = new TextView(MainActivity.this);
-				textView.setText("带图片的提示信息");
+				textView.setText("图片提示");
 				// 设置文本框内字号的大小和字体颜色
 				textView.setTextSize(24);
 				textView.setTextColor(Color.MAGENTA);

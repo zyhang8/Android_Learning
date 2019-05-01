@@ -8,10 +8,10 @@
 		android:id="@+id/simple"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="显示简单提示"/>
+		android:text="文字提示"/>
 	<Button
 		android:id="@+id/bn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="显示带图片的提示"/>
+		android:text="图片提示"/>
 </LinearLayout>

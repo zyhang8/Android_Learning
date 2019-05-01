@@ -17,7 +17,7 @@ public class MainActivity extends Activity
 		setContentView(R.layout.main);
 		ListView list1 = (ListView) findViewById(R.id.list1);
 		// 定义一个数组
-		String[] arr1 = { "孙悟空", "猪八戒", "牛魔王" };
+		String[] arr1 = { "Windows", "Mac OS", "Linux" };
 		// 将数组包装为ArrayAdapter
 		ArrayAdapter<String> adapter1 = new ArrayAdapter<String>
 				(this, R.layout.array_item, arr1);

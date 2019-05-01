@@ -7,14 +7,14 @@
 	<ToggleButton android:id="@+id/toggle"
 				  android:layout_width="wrap_content"
 				  android:layout_height="wrap_content"
-				  android:textOff="横向排列"
-				  android:textOn="纵向排列"
+				  android:textOff="横向"
+				  android:textOn="纵向"
 				  android:checked="true"/>
 	<Switch android:id="@+id/switcher"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:textOff="横向排列"
-			android:textOn="纵向排列"
+			android:textOff="横向"
+			android:textOn="纵向"
 			android:thumb="@drawable/check"
 			android:checked="true"/>
 	<!-- 定义一个可以动态改变方向的线性布局 -->
@@ -25,17 +25,17 @@
 		<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="测试按钮一"
+			android:text="一"
 			/>
 		<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="测试按钮二"
+			android:text="二"
 			/>
 		<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="测试按钮三"
+			android:text="三"
 			/>
 	</LinearLayout>
 </LinearLayout>

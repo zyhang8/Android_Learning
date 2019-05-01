@@ -15,10 +15,10 @@ public class MainActivity extends Activity
 	MultiAutoCompleteTextView mauto;
 	// 定义字符串数组，作为提示的文本
 	String[] books = new String[]{
-			"疯狂Java讲义",
-			"疯狂Ajax讲义",
-			"疯狂XML讲义",
-			"疯狂Workflow讲义"
+			"Python神经网络",
+			"Python量化投资",
+			"Python自动化运维",
+			"Python数据科学"
 	};
 	@Override
 	public void onCreate(Bundle savedInstanceState)

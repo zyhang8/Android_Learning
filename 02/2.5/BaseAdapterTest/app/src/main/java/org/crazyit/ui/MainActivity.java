@@ -51,9 +51,9 @@ public class MainActivity extends Activity
 				LinearLayout line = new LinearLayout(MainActivity.this);
 				line.setOrientation(0);
 				ImageView image = new ImageView(MainActivity.this);
-				image.setImageResource(R.drawable.ic_launcher);
+				image.setImageResource(R.drawable.zyhang);
 				TextView text = new TextView(MainActivity.this);
-				text.setText("第" + (position +1 ) + "个列表项");
+				text.setText("第" + (position +1 ) + "个一百天");
 				text.setTextSize(20);
 				text.setTextColor(Color.RED);
 				line.addView(image);

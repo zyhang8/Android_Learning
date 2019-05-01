@@ -49,7 +49,7 @@ public class MainActivity extends Activity
 		{
 			String label = "" + i;
 			Drawable drawable = getResources().getDrawable(
-					R.drawable.ic_launcher);
+					R.drawable.zyhang);
 			DataItem item = new DataItem();
 			item.dataName = label;
 			item.drawable = drawable;

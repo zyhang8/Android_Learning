@@ -71,7 +71,7 @@ public class MainActivity extends Activity
 			, int day, int hour, int minute)
 	{
 		EditText show = (EditText) findViewById(R.id.show);
-		show.setText("您的购买日期为：" + year + "年"
+		show.setText("接触安卓的时间为：" + year + "年"
 				+ (month + 1) + "月" + day + "日  "
 				+ hour + "时" + minute + "分");
 	}
