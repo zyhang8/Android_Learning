@@ -29,7 +29,7 @@ public class MainActivity extends Activity
 				try
 				{
 					// 建立连接到远程服务器的Socket
-					Socket socket = new Socket("192.168.1.88" , 30000);  // ①
+					Socket socket = new Socket("202.121.64.5" , 30000);  // ①
 					// 将Socket对应的输入流包装成BufferedReader
 					BufferedReader br = new BufferedReader(
 							new InputStreamReader(socket.getInputStream()));

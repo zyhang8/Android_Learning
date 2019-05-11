@@ -16,9 +16,9 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 	TextView show;
 	String[] items = new String[] {
-			"疯狂Java讲义", "疯狂Ajax讲义",
-			"轻量级Java EE企业应用实战",
-			"疯狂Android讲义" };
+			"感知器", "线性单元和梯度下降",
+			"神经网络和反向传播算法",
+			"卷积神经网络" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

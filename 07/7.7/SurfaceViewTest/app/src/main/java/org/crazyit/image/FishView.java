@@ -26,7 +26,7 @@ public class FishView extends SurfaceView
 	private float fishSpeed = 6; // 鱼的游动速度
 	// 定义鱼游动的角度
 	private int fishAngle = new Random().nextInt(60);
-	Matrix matrix = new Matrix();
+	Matrix matrix = new Matrix();/
 	public FishView(Context ctx, AttributeSet set)
 	{
 		super(ctx, set);
