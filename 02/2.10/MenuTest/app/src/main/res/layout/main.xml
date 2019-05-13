@@ -7,6 +7,6 @@
 	android:id="@+id/txt" 
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content" 
-	android:text="用于测试的内容"
+	android:text="卢大大"
 	android:editable="false"/>
 </LinearLayout>

@@ -16,10 +16,10 @@ public class MainActivity extends Activity
 	TextSwitcher textSwitcher;
 	String[] strs = new String[]
 	{
-		"疯狂Java讲义",
-		"轻量级Java EE企业应用实战",
-		"疯狂Android讲义",
-		"疯狂Ajax讲义"
+		"ORM",
+		"CORBA",
+		"Web Service",
+		"RPC"
 	};
 	int curStr;
 	@Override

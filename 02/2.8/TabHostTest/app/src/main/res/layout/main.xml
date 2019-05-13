@@ -26,12 +26,12 @@
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="女儿国国王 - 2012/12/12"
+					android:text="钢铁侠 - 2019/05/01"
 					android:textSize="11pt" />
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="东海龙女 - 2012/12/18"
+					android:text="绿巨人 - 2019/05/02"
 					android:textSize="11pt" />
 			</LinearLayout>
 			<!-- 定义第二个标签页的内容 -->
@@ -43,12 +43,12 @@
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="白骨精  - 2012/08/12"
+					android:text="美国队长  - 2019/04/30"
 					android:textSize="11pt" />
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="蜘蛛精 - 2012/09/20"
+					android:text="黑寡妇 - 2019/04/29"
 					android:textSize="11pt" />
 			</LinearLayout>
 			<!-- 定义第三个标签页的内容 -->
@@ -61,12 +61,12 @@
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="孙悟空 - 2012/09/19"
+					android:text="惊奇队长 - 2019/05/03"
 					android:textSize="11pt" />
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="猪八戒  - 2012/10/12"
+					android:text="雷神  - 2019/05/04"
 					android:textSize="11pt" />
 			</LinearLayout>
 		</FrameLayout>

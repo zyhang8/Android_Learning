@@ -18,7 +18,7 @@ public class MainActivity extends Activity
 		setContentView(R.layout.main);
 		// 获取界面布局文件中的Spinner组件
 		spinner = (Spinner) findViewById(R.id.spinner);
-		String[] arr = { "孙悟空", "猪八戒", "唐僧" };
+		String[] arr = { "Oracle", "Redis", "MongoDB" };
 		// 创建ArrayAdapter对象
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 			android.R.layout.simple_list_item_multiple_choice, arr);

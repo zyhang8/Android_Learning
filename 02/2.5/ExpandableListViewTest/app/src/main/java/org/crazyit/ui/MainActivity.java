@@ -64,7 +64,7 @@ public class MainActivity extends Activity
 				textView.setLayoutParams(lp);
 				textView.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
 				textView.setPadding(36, 0, 0, 0);
-				textView.setTextSize(20);
+				textView.setTextSize(10);
 				return textView;
 			}
 			// 该方法决定每个子选项的外观

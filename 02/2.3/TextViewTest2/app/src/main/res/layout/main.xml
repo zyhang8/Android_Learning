@@ -3,17 +3,63 @@
 			  android:orientation="vertical"
 			  android:layout_width="match_parent"
 			  android:layout_height="match_parent">
+
+	<!-- 设置字号为20pt，文本框结尾处绘制图片  -->
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Python"
+		android:textSize="20pt"
+		android:drawableEnd="@drawable/ic_launcher"/>
+	<!-- 设置中间省略，所有字母大写 -->
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:text="机器学习网络爬虫数据分析网络编程GUI"
+		android:ellipsize="middle"
+		android:textAllCaps="true"/>
+	<!-- 对邮件、电话增加链接 -->
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:text="Github是https://github.com/zyhang8"
+		android:autoLink="email|phone"/>
+	<!-- 设置文字颜色、大小，并使用阴影 -->
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Redis"
+		android:shadowColor="#00f"
+		android:shadowDx="10.0"
+		android:shadowDy="8.0"
+		android:shadowRadius="3.0"
+		android:textColor="#f00"
+		android:textSize="18pt"/>
+	<!-- 测试密码框 -->
+	<TextView android:id="@+id/passwd"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="mima"
+		android:password="true"/>
+	<CheckedTextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="可勾选"
+		android:checkMark="@drawable/ok" />
+
 	<!-- 通过android:background指定背景 -->
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="带边框的文本"
+		android:text="带边框"
 		android:textSize="24pt"
 		android:background="@drawable/bg_border"/>
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="圆角边框、渐变背景的文本"
+		android:text="圆角边框、渐变背景"
 		android:textSize="24pt"
 		android:background="@drawable/bg_border2"/>
 </LinearLayout>

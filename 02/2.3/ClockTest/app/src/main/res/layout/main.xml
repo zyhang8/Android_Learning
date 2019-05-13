@@ -14,8 +14,7 @@
 		android:layout_height="wrap_content"
 		android:textSize="10pt"
 		android:textColor="#f0f"
-		android:format12Hour="yyyy年MM月dd日 H:mma EEEE"
-		android:drawableEnd="@drawable/ic_launcher"/>
+		android:format12Hour="yyyy年MM月dd日 H:mma EEEE" />
 	<!-- 定义模拟时钟，并使用自定义表盘、时针图片 -->
 	<AnalogClock
 		android:layout_width="wrap_content"

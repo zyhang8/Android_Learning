@@ -4,29 +4,34 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:gravity= "right|center_vertical">
+
 	<Button
 		android:id="@+id/bn1"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="@string/bn1"/>
+		android:text="@string/bn1" />
+
 	<Button
 		android:id="@+id/bn2"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="@string/bn2"/>
+		android:text="@string/bn2" />
+
 	<Button
 		android:id="@+id/bn3"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="@string/bn3"/>
+		android:text="@string/bn3" />
+
 	<Button
 		android:id="@+id/bn4"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="@string/bn4"/>
+		android:text="@string/bn4" />
+
 	<Button
 		android:id="@+id/bn5"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="@string/bn5"/>
+		android:text="@string/bn5" />
 </LinearLayout>

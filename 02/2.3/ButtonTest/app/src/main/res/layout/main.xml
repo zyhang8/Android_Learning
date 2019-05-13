@@ -7,7 +7,7 @@
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="文字带阴影的按钮"
+		android:text="文字带阴影"
 		android:textSize="12pt"
 		android:shadowColor="#aa5"
 		android:shadowRadius="1"
@@ -26,5 +26,5 @@
 		android:layout_height="wrap_content"
 		android:background="@drawable/button_selector"
 		android:textSize="11px"
-		android:text="带文字的图片按钮"/>
+		android:text="带图片按钮"/>
 </LinearLayout>

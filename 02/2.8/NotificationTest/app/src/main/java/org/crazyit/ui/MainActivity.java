@@ -41,7 +41,7 @@ public class MainActivity extends Activity
 			// 设置通知内容的标题
 			.setContentTitle("一条新通知")
 			// 设置通知内容
-			.setContentText("恭喜你，您加薪了，工资增加20%!")
+			.setContentText("恭喜你，您获得了人民奖学金一等奖")
 			// 设置使用系统默认的声音、默认LED灯
 			// .setDefaults(Notification.DEFAULT_SOUND
 			// |Notification.DEFAULT_LIGHTS)

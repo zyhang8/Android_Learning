@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			  android:orientation="vertical"
-			  android:layout_width="match_parent"
-			  android:layout_height="match_parent">
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
 	<!-- 设置字号为20pt，文本框结尾处绘制图片  -->
 	<TextView
 		android:layout_width="match_parent"
@@ -38,10 +38,10 @@
 		android:textSize="18pt"/>
 	<!-- 测试密码框 -->
 	<TextView android:id="@+id/passwd"
-			  android:layout_width="match_parent"
-			  android:layout_height="wrap_content"
-			  android:text="@string/hello_world"
-			  android:password="true"/>
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/hello_world"
+		android:password="true"/>
 	<CheckedTextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"

@@ -15,5 +15,5 @@
 		android:layout_height="wrap_content"
 		android:max="255"
 		android:progress="255"
-		android:thumb="@drawable/ic_launcher"/>
+		android:thumb="@drawable/zyhang"/>
 </LinearLayout>
