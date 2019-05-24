@@ -1,10 +1,6 @@
-drop database if exists auction;
+use android_test;
 
-create database auction;
-
-use auction;
-
-#用户表
+# user_table
 create table auction_user(
   user_id int(11) auto_increment,
   username varchar(50) not null,
@@ -17,7 +13,7 @@ create table auction_user(
 INSERT INTO auction_user (username,userpass,email) VALUES ('tomcat','tomcat','spring_test@163.com');
 INSERT INTO auction_user (username,userpass,email) VALUES ('mysql','mysql','spring_test@163.com');
 
-#物品种类表
+# item_category_table
 create table kind(
   kind_id int(11) auto_increment,
   kind_name varchar(50) not null, 
@@ -25,21 +21,21 @@ create table kind(
   primary key(kind_id)
 );
 
-INSERT INTO kind (kind_name,kind_desc) VALUES ('电脑硬件','这里并不是很主流的产品，但价格绝对令你心动');
-INSERT INTO kind (kind_name,kind_desc) VALUES ('房产','提供非常稀缺的房源');
+INSERT INTO kind (kind_name,kind_desc) VALUES ('computer_hardware','it is not a very mainstream product here, but the price is absolutely heartening to you.');
+INSERT INTO kind (kind_name,kind_desc) VALUES ('house_property','tigongfengchangxiquedefnagyuan');
 
-#物品状态表
+# item_state_table
 create table state(
   state_id int(11) auto_increment,
   state_name varchar(10),
   primary key(state_id)
 );
 
-INSERT INTO state (state_name) VALUES ('拍卖中');
-INSERT INTO state (state_name) VALUES ('拍卖成功');
-INSERT INTO state (state_name) VALUES ('流拍');
+INSERT INTO state (state_name) VALUES ('auction');
+INSERT INTO state (state_name) VALUES ('pai');
+INSERT INTO state (state_name) VALUES ('auctioning');
 
-#物品表
+# item_tables
 create table item(
   item_id int(11) auto_increment,
   item_name varchar(255) not null,
@@ -54,23 +50,23 @@ create table item(
   winer_id int(11), 
   state_id int(11) not null, 
   primary key(item_id),
-  FOREIGN KEY(kind_id) REFERENCES kind(kind_id), 
+  FOREIGN KEY(kind_id) REFERENCES kind(kind_id),
   FOREIGN KEY(owner_id) REFERENCES auction_user(user_id),
   FOREIGN KEY(winer_id) REFERENCES auction_user(user_id),
   FOREIGN KEY(state_id) REFERENCES state(state_id)
 ); 
 
-# 拍卖中的物品
+# auction_item
 INSERT INTO item ( item_name , item_remark , item_desc, kind_id, addtime , endtime, init_price,  max_price,  owner_id,  winer_id,  state_id)
-	VALUES ( '主板', '老式主板', '老主板，还可以用', 1, ADDDATE(CURDATE(), -5), ADDDATE(CURDATE(), 30) , 230, 250, 1,  null,  1);
+	VALUES ( 'mainboard', 'old_board', 'old-board_can_use', 1, ADDDATE(CURDATE(), -5), ADDDATE(CURDATE(), 30) , 230, 250, 1,  null,  1);
 # 流派的物品
 INSERT INTO item ( item_name , item_remark , item_desc, kind_id, addtime , endtime, init_price,  max_price,  owner_id,  winer_id,  state_id)
-	VALUES ( '显卡', '老式显卡', '老显卡，还可以用', 1, ADDDATE(CURDATE(), -9), ADDDATE(CURDATE(), -2), 210, 210, 2,  null,  3);
+	VALUES ( 'graphics_card', 'old_graphics_card', 'old_graphics_card_can_use', 1, ADDDATE(CURDATE(), -9), ADDDATE(CURDATE(), -2), 210, 210, 2,  null,  3);
 # 被竞得的物品
 INSERT INTO item ( item_name , item_remark , item_desc, kind_id, addtime , endtime, init_price,  max_price,  owner_id,  winer_id,  state_id)
-	VALUES ( '老房子', '老式房子', '40年的老房子', 2, ADDDATE(CURDATE(), -9), ADDDATE(CURDATE(), -5), 21000, 25000, 2,  1,  2);
+	VALUES ( 'old_house', 'old_style_house', '40_year_old_house', 2, ADDDATE(CURDATE(), -9), ADDDATE(CURDATE(), -5), 21000, 25000, 2,  1,  2);
 
-#竞标历史表
+# bid_history_table
 create table bid(
   bid_id int(11) auto_increment,
   user_id int(11) not null,
