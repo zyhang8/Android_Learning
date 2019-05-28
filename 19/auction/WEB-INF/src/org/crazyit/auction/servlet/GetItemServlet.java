@@ -12,7 +12,7 @@ import org.json.*;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2001-2014, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -23,18 +23,18 @@ import org.json.*;
 @WebServlet(urlPatterns="/android/getItem.jsp")
 public class GetItemServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
 		request.setCharacterEncoding("gbk");
-		// 获取物品的ID
+		// 鑾峰彇鐗╁搧鐨処D
 		String itemId = request.getParameter("itemId");
-		// 获取业务逻辑组件
+		// 鑾峰彇涓氬姟閫昏緫缁勪欢
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// 调用业务逻辑方法
+		// 璋冪敤涓氬姟閫昏緫鏂规硶
 		ItemBean itemBean = auctionManager.getItem(Integer.parseInt(itemId));
-		// 将所有的物品种类包装成JSONObject
+		// 灏嗘墍鏈夌殑鐗╁搧绉嶇被鍖呰鎴怞SONObject
 		JSONObject jsonObj = new JSONObject(itemBean);
 		response.setContentType("text/html; charset=GBK");
 		response.getWriter().println(jsonObj.toString());

@@ -12,7 +12,7 @@ import org.json.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -23,27 +23,27 @@ import org.json.*;
 @WebServlet(urlPatterns="/android/addKind.jsp")
 public class AddKindServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
 		request.setCharacterEncoding("gbk");
-		// »ñÈ¡ÇëÇó²ÎÊı
+		// è·å–è¯·æ±‚å‚æ•°
 		String name = request.getParameter("kindName");
 		String desc = request.getParameter("kindDesc");
-		// »ñÈ¡ÏµÍ³ÒµÎñÂß¼­×é¼ş
+		// è·å–ç³»ç»Ÿä¸šåŠ¡é€»è¾‘ç»„ä»¶
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// µ÷ÓÃÒµÎñÂß¼­×é¼şµÄÒµÎñ·½·¨Ìí¼ÓÖÖÀà
+		// è°ƒç”¨ä¸šåŠ¡é€»è¾‘ç»„ä»¶çš„ä¸šåŠ¡æ–¹æ³•æ·»åŠ ç§ç±»
 		int kindId = auctionManager.addKind(new Kind(name , desc));
 		response.setContentType("text/html; charset=GBK");
-		// Ìí¼Ó³É¹¦
+		// æ·»åŠ æˆåŠŸ
 		if (kindId > 0)
 		{
-			response.getWriter().println("¹§Ï²Äú£¬ÖÖÀàÌí¼Ó³É¹¦!");
+			response.getWriter().println("æ­å–œæ‚¨ï¼Œç§ç±»æ·»åŠ æˆåŠŸ!");
 		}
 		else
 		{
-			response.getWriter().println("¶Ô²»Æğ£¬ÖÖÀàÌí¼ÓÊ§°Ü!");
+			response.getWriter().println("å¯¹ä¸èµ·ï¼Œç§ç±»æ·»åŠ å¤±è´¥!");
 		}
 	}
 }

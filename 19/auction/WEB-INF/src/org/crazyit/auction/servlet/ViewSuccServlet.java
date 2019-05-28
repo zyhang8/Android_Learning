@@ -13,7 +13,7 @@ import org.json.*;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -24,16 +24,16 @@ import org.json.*;
 @WebServlet(urlPatterns="/android/viewSucc.jsp")
 public class ViewSuccServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
-		// 获取userId
+		// 鑾峰彇userId
 		Integer userId = (Integer)request.getSession(true)
-			.getAttribute("userId");
-		// 获取业务逻辑组件
+				.getAttribute("userId");
+		// 鑾峰彇涓氬姟閫昏緫缁勪欢
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// 获取该用户所有竞得的物品
+		// 鑾峰彇璇ョ敤鎴锋墍鏈夌珵寰楃殑鐗╁搧
 		List<ItemBean> items = auctionManager.getItemByWiner(userId);
 		JSONArray jsonArr= new JSONArray(items);
 		response.setContentType("text/html; charset=GBK");

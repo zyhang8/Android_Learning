@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -22,13 +22,13 @@ public class BidBean implements Serializable
 	private Date bidDate;
 
 
-	// ÎÞ²ÎÊýµÄ¹¹ÔìÆ÷
+	// æ— å‚æ•°çš„æž„é€ å™¨
 	public BidBean()
 	{
 	}
-	// ³õÊ¼»¯È«²¿ÊôÐÔµÄ¹¹ÔìÆ÷
+	// åˆå§‹åŒ–å…¨éƒ¨å±žæ€§çš„æž„é€ å™¨
 	public BidBean(int id , String user , String item ,
-		double price , Date bidDate)
+				   double price , Date bidDate)
 	{
 		this.id = id;
 		this.user = user;
@@ -37,7 +37,7 @@ public class BidBean implements Serializable
 		this.bidDate = bidDate;
 	}
 
-	// idÊôÐÔµÄsetterºÍgetter·½·¨
+	// idå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setId(int id)
 	{
 		this.id = id;
@@ -47,7 +47,7 @@ public class BidBean implements Serializable
 		return this.id;
 	}
 
-	// userÊôÐÔµÄsetterºÍgetter·½·¨
+	// userå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setUser(String user)
 	{
 		this.user = user;
@@ -57,7 +57,7 @@ public class BidBean implements Serializable
 		return this.user;
 	}
 
-	// itemÊôÐÔµÄsetterºÍgetter·½·¨
+	// itemå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setItem(String item)
 	{
 		this.item = item;
@@ -67,7 +67,7 @@ public class BidBean implements Serializable
 		return this.item;
 	}
 
-	// priceÊôÐÔµÄsetterºÍgetter·½·¨
+	// priceå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setPrice(double price)
 	{
 		this.price = price;
@@ -77,7 +77,7 @@ public class BidBean implements Serializable
 		return this.price;
 	}
 
-	// bidDateÊôÐÔµÄsetterºÍgetter·½·¨
+	// bidDateå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setBidDate(Date bidDate)
 	{
 		this.bidDate = bidDate;

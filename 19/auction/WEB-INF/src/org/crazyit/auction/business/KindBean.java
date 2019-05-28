@@ -2,7 +2,7 @@ package org.crazyit.auction.business;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -16,11 +16,11 @@ public class KindBean
 	private String kindName;
 	private String kindDesc;
 
-	// 无参数的构造器
+	// 鏃犲弬鏁扮殑鏋勯�犲櫒
 	public KindBean()
 	{
 	}
-	// 初始化全部属性的构造器
+	// 鍒濆鍖栧叏閮ㄥ睘鎬х殑鏋勯�犲櫒
 	public KindBean(int id , String kindName , String kindDesc)
 	{
 		this.id = id;
@@ -28,7 +28,7 @@ public class KindBean
 		this.kindDesc = kindDesc;
 	}
 
-	// id的setter和getter方法
+	// id鐨剆etter鍜実etter鏂规硶
 	public void setId(int id)
 	{
 		this.id = id;
@@ -38,7 +38,7 @@ public class KindBean
 		return this.id;
 	}
 
-	// kindName的setter和getter方法
+	// kindName鐨剆etter鍜実etter鏂规硶
 	public void setKindName(String kindName)
 	{
 		this.kindName = kindName;
@@ -48,7 +48,7 @@ public class KindBean
 		return this.kindName;
 	}
 
-	// kindDesc的setter和getter方法
+	// kindDesc鐨剆etter鍜実etter鏂规硶
 	public void setKindDesc(String kindDesc)
 	{
 		this.kindDesc = kindDesc;

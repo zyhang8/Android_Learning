@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -18,58 +18,58 @@ import javax.persistence.*;
 @Table(name="item")
 public class Item
 {
-	// ±êÊ¶ÊôĞÔ
+	// æ ‡è¯†å±æ€§
 	@Id
 	@Column(name="item_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	// ÎïÆ·Remark
+	// ç‰©å“Remark
 	@Column(name="item_remark")
 	private String itemRemark;
-	// ÎïÆ·Ãû³Æ
+	// ç‰©å“åç§°
 	@Column(name="item_name")
 	private String itemName;
-	// ÎïÆ·ÃèÊö
+	// ç‰©å“æè¿°
 	@Column(name="item_desc")
 	private String itemDesc;
-	// ÎïÆ·Ìí¼ÓÊ±¼ä
+	// ç‰©å“æ·»åŠ æ—¶é—´
 	private Date addtime;
-	// ÎïÆ·½áÊøÅÄÂôÊ±¼ä
+	// ç‰©å“ç»“æŸæ‹å–æ—¶é—´
 	private Date endtime;
-	// ÎïÆ·µÄÆğÅÄ¼Û
+	// ç‰©å“çš„èµ·æ‹ä»·
 	@Column(name="init_price")
 	private double initPrice;
-	// ÎïÆ·µÄ×î¸ß¼Û
+	// ç‰©å“çš„æœ€é«˜ä»·
 	@Column(name="max_price")
 	private double maxPrice;
-	// ¸ÃÎïÆ·µÄËùÓĞÕß
+	// è¯¥ç‰©å“çš„æ‰€æœ‰è€…
 	@ManyToOne(targetEntity=AuctionUser.class)
 	@JoinColumn(name="owner_id", nullable=false)
 	private AuctionUser owner;
-	// ¸ÃÎïÆ·ËùÊôµÄÖÖÀà
+	// è¯¥ç‰©å“æ‰€å±çš„ç§ç±»
 	@ManyToOne(targetEntity=Kind.class)
 	@JoinColumn(name="kind_id", nullable=false)
 	private Kind kind;
-	// ¸ÃÎïÆ·µÄÓ®È¡Õß
+	// è¯¥ç‰©å“çš„èµ¢å–è€…
 	@ManyToOne(targetEntity=AuctionUser.class)
 	@JoinColumn(name="winer_id", nullable=true)
 	private AuctionUser winer;
-	// ¸ÃÎïÆ·Ëù´¦µÄ×´Ì¬
+	// è¯¥ç‰©å“æ‰€å¤„çš„çŠ¶æ€
 	@ManyToOne(targetEntity=State.class)
 	@JoinColumn(name="state_id", nullable=false)
 	private State itemState;
-	// ¸ÃÎïÆ·¶ÔÓ¦µÄÈ«²¿¾º¼Û¼ÇÂ¼
+	// è¯¥ç‰©å“å¯¹åº”çš„å…¨éƒ¨ç«ä»·è®°å½•
 	@OneToMany(targetEntity=Bid.class ,
-		mappedBy="bidItem")
+			mappedBy="bidItem")
 	private Set<Bid> bids = new HashSet<Bid>();
 
-	// ÎŞ²ÎÊıµÄ¹¹ÔìÆ÷
+	// æ— å‚æ•°çš„æ„é€ å™¨
 	public Item()
 	{
 	}
-	// ³õÊ¼»¯È«²¿»ù±¾ÊôĞÔµÄ¹¹ÔìÆ÷
+	// åˆå§‹åŒ–å…¨éƒ¨åŸºæœ¬å±æ€§çš„æ„é€ å™¨
 	public Item( String itemName , String itemDesc
-		, String itemRemark , double initPrice)
+			, String itemRemark , double initPrice)
 	{
 		this.itemName = itemName;
 		this.itemDesc = itemDesc;
@@ -77,7 +77,7 @@ public class Item
 		this.initPrice = initPrice;
 	}
 
-	// idµÄsetterºÍgetter·½·¨
+	// idçš„setterå’Œgetteræ–¹æ³•
 	public void setId(Integer id)
 	{
 		this.id = id;
@@ -87,7 +87,7 @@ public class Item
 		return this.id;
 	}
 
-	// itemRemarkµÄsetterºÍgetter·½·¨
+	// itemRemarkçš„setterå’Œgetteræ–¹æ³•
 	public void setItemRemark(String itemRemark)
 	{
 		this.itemRemark = itemRemark;
@@ -97,7 +97,7 @@ public class Item
 		return this.itemRemark;
 	}
 
-	// itemNameµÄsetterºÍgetter·½·¨
+	// itemNameçš„setterå’Œgetteræ–¹æ³•
 	public void setItemName(String itemName)
 	{
 		this.itemName = itemName;
@@ -107,7 +107,7 @@ public class Item
 		return this.itemName;
 	}
 
-	// itemDescµÄsetterºÍgetter·½·¨
+	// itemDescçš„setterå’Œgetteræ–¹æ³•
 	public void setItemDesc(String itemDesc)
 	{
 		this.itemDesc = itemDesc;
@@ -117,7 +117,7 @@ public class Item
 		return this.itemDesc;
 	}
 
-	// addtimeµÄsetterºÍgetter·½·¨
+	// addtimeçš„setterå’Œgetteræ–¹æ³•
 	public void setAddtime(Date addtime)
 	{
 		this.addtime = addtime;
@@ -127,7 +127,7 @@ public class Item
 		return this.addtime;
 	}
 
-	// endtimeµÄsetterºÍgetter·½·¨
+	// endtimeçš„setterå’Œgetteræ–¹æ³•
 	public void setEndtime(Date endtime)
 	{
 		this.endtime = endtime;
@@ -137,7 +137,7 @@ public class Item
 		return this.endtime;
 	}
 
-	// initPriceµÄsetterºÍgetter·½·¨
+	// initPriceçš„setterå’Œgetteræ–¹æ³•
 	public void setInitPrice(double initPrice)
 	{
 		this.initPrice = initPrice;
@@ -147,7 +147,7 @@ public class Item
 		return this.initPrice;
 	}
 
-	// maxPriceµÄsetterºÍgetter·½·¨
+	// maxPriceçš„setterå’Œgetteræ–¹æ³•
 	public void setMaxPrice(double maxPrice)
 	{
 		this.maxPrice = maxPrice;
@@ -157,7 +157,7 @@ public class Item
 		return this.maxPrice;
 	}
 
-	// ownerµÄsetterºÍgetter·½·¨
+	// ownerçš„setterå’Œgetteræ–¹æ³•
 	public void setOwner(AuctionUser owner)
 	{
 		this.owner = owner;
@@ -167,7 +167,7 @@ public class Item
 		return this.owner;
 	}
 
-	// kindµÄsetterºÍgetter·½·¨
+	// kindçš„setterå’Œgetteræ–¹æ³•
 	public void setKind(Kind kind)
 	{
 		this.kind = kind;
@@ -177,7 +177,7 @@ public class Item
 		return this.kind;
 	}
 
-	// winerµÄsetterºÍgetter·½·¨
+	// winerçš„setterå’Œgetteræ–¹æ³•
 	public void setWiner(AuctionUser winer)
 	{
 		this.winer = winer;
@@ -187,7 +187,7 @@ public class Item
 		return this.winer;
 	}
 
-	// itemStateµÄsetterºÍgetter·½·¨
+	// itemStateçš„setterå’Œgetteræ–¹æ³•
 	public void setItemState(State itemState)
 	{
 		this.itemState = itemState;
@@ -197,7 +197,7 @@ public class Item
 		return this.itemState;
 	}
 
-	// bidsµÄsetterºÍgetter·½·¨
+	// bidsçš„setterå’Œgetteræ–¹æ³•
 	public void setBids(Set<Bid> bids)
 	{
 		this.bids = bids;

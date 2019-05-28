@@ -10,7 +10,7 @@ import org.crazyit.auction.action.base.BaseAction;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>website: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -20,79 +20,79 @@ import org.crazyit.auction.action.base.BaseAction;
  */
 public class AddBidAction extends BaseAction
 {
-	// ·â×°ÇëÇó²ÎÊıµÄÊôĞÔ
-	private int itemId;
-	private Bid bid;
-	private double maxPrice;
-	private String vercode;
-	// ÖØĞ´validate·½·¨Íê³É×Ô¶¨ÒåÊäÈëĞ£Ñé
-	@Override
-	public void validate()
-	{
-		// ÓÃ»§¾º¼Û±ØĞë´óÓÚÎïÆ·µÄµ±Ç°×î¸ß¼Û
-		if(bid.getBidPrice() <= maxPrice)
-		{
-			addFieldError("bid.bidPrice", "ÄúÊäÈëµÄ¾º¼Û±ØĞë¸ßÓÚµ±Ç°×î¸ß¼Û£¡");
-		}
-	}
-	// ´¦ÀíÓÃ»§¾º¼Û
-	public String execute() throws Exception
-	{
-		Map session = ActionContext.getContext().getSession();
-		// È¡³öSessionÖĞµÄuserIdºÍ¸Õ¸ÕÉú³ÉµÄËæ»úÑéÖ¤Âë
-		Integer userId = (Integer)session.get("userId");
-		String ver2 = (String)session.get("rand");
-		session.put("rand" , null);
-		// Èç¹ûÓÃ»§ÊäÈëµÄÑéÖ¤ÂëºÍSessionÖĞµÄËæ»úÑéÖ¤ÂëÏàÍ¬
-		if (vercode.equals(ver2))
-		{
-			mgr.addBid(itemId , bid ,userId);
-			return SUCCESS;
-		}
-		else
-		{
-			addActionError("ÑéÖ¤Âë²»Æ¥Åä,ÇëÖØĞÂÊäÈë");
-			return INPUT;
-		}
-	}
+    // å°è£…è¯·æ±‚å‚æ•°çš„å±æ€§
+    private int itemId;
+    private Bid bid;
+    private double maxPrice;
+    private String vercode;
+    // é‡å†™validateæ–¹æ³•å®Œæˆè‡ªå®šä¹‰è¾“å…¥æ ¡æ£€
+    @Override
+    public void validate()
+    {
+        // ç”¨æˆ·ç«ä»·å¿…é¡»å¤§äºç‰©å“çš„å½“å‰æœ€é«˜ä»·
+        if(bid.getBidPrice() <= maxPrice)
+        {
+            addFieldError("bid.bidPrice", "ä½ è¾“å…¥å³ç«ä»·å¿…é¡»é«˜äºå½“å‰æœ€é«˜ä»·ï¼");
+        }
+    }
+    // å¤„ç†ç”¨æˆ·ç«ä»·
+    public String execute() throws Exception
+    {
+        Map session = ActionContext.getContext().getSession();
+        // å–å‡ºSessionä¸­çš„userIDå’Œåˆšåˆšç”Ÿæˆçš„éšæœºéªŒè¯ç 
+        Integer userId = (Integer)session.get("userId");
+        String ver2 = (String)session.get("rand");
+        session.put("rand" , null);
+        // å¦‚æœç”¨æˆ·è¾“å…¥çš„éªŒè¯ç å’ŒSessionä¸­çš„éšæœºéªŒè¯ç ç›¸åŒ
+        if (vercode.equals(ver2))
+        {
+            mgr.addBid(itemId , bid ,userId);
+            return SUCCESS;
+        }
+        else
+        {
+            addActionError("éªŒè¯ç ä¸åŒ¹é…ï¼Œè¯·é‡æ–°è¾“å…¥");
+            return INPUT;
+        }
+    }
 
-	// itemIdµÄsetterºÍgetter·½·¨
-	public void setItemId(int itemId)
-	{
-		this.itemId = itemId;
-	}
-	public int getItemId()
-	{
-		return this.itemId;
-	}
+    // itemIdä¸­çš„setterå’Œgetteræ–¹æ³•
+    public void setItemId(int itemId)
+    {
+        this.itemId = itemId;
+    }
+    public int getItemId()
+    {
+        return this.itemId;
+    }
 
-	// bidµÄsetterºÍgetter·½·¨
-	public void setBid(Bid bid)
-	{
-		this.bid = bid;
-	}
-	public Bid getBid()
-	{
-		return this.bid;
-	}
+    // bidçš„setterå’Œgetteræ–¹æ³•
+    public void setBid(Bid bid)
+    {
+        this.bid = bid;
+    }
+    public Bid getBid()
+    {
+        return this.bid;
+    }
 
-	// maxPriceµÄsetterºÍgetter·½·¨
-	public void setMaxPrice(double maxPrice)
-	{
-		this.maxPrice = maxPrice;
-	}
-	public double getMaxPrice()
-	{
-		return this.maxPrice;
-	}
+    // maxPriceçš„setterå’Œgetteræ–¹æ³•
+    public void setMaxPrice(double maxPrice)
+    {
+        this.maxPrice = maxPrice;
+    }
+    public double getMaxPrice()
+    {
+        return this.maxPrice;
+    }
 
-	// vercodeµÄsetterºÍgetter·½·¨
-	public void setVercode(String vercode)
-	{
-		this.vercode = vercode;
-	}
-	public String getVercode()
-	{
-		return this.vercode;
-	}
+    // vercodeçš„setterå’Œgetteræ–¹æ³•
+    public void setVercode(String vercode)
+    {
+        this.vercode = vercode;
+    }
+    public String getVercode()
+    {
+        return this.vercode;
+    }
 }

@@ -13,7 +13,7 @@ import org.json.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -24,18 +24,18 @@ import org.json.*;
 @WebServlet(urlPatterns="/android/viewOwnerItem.jsp")
 public class ViewOwnerItemServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
-		// »ñÈ¡userId
+		// è·å–userId
 		Integer userId = (Integer)request.getSession(true)
-			.getAttribute("userId");
-		// »ñÈ¡ÒµÎñÂß¼­×é¼ş
+				.getAttribute("userId");
+		// è·å–ä¸šåŠ¡é€»è¾‘ç»„ä»¶
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// »ñÈ¡¸ÃÓÃ»§µ±Ç°´¦ÓÚÅÄÂôÖĞµÄËùÓĞÎïÆ·
+		// è·å–è¯¥ç”¨æˆ·å½“å‰å¤„äºæ‹å–ä¸­çš„æ‰€æœ‰ç‰©å“
 		List<ItemBean> items = auctionManager.getItemsByOwner(userId);
-		// ½«²éÑ¯µÃµ½µÄÎïÆ··â×°³ÉJSONArray¶ÔÏó
+		// å°†æŸ¥è¯¢å¾—åˆ°çš„ç‰©å“å°è£…æˆJSONArrayå¯¹è±¡
 		JSONArray jsonArr= new JSONArray(items);
 		response.setContentType("text/html; charset=GBK");
 		response.getWriter().println(jsonArr.toString());

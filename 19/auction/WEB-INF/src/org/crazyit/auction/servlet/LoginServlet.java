@@ -11,7 +11,7 @@ import org.json.*;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -22,28 +22,28 @@ import org.json.*;
 @WebServlet(urlPatterns="/android/login.jsp")
 public class LoginServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
 		String user = request.getParameter("user");
 		String pass = request.getParameter("pass");
-		// 获取系统的业务逻辑组件
+		// 鑾峰彇绯荤粺鐨勪笟鍔￠�昏緫缁勪欢
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// 验证用户登录
+		// 楠岃瘉鐢ㄦ埛鐧诲綍
 		int userId = auctionManager.validLogin(user , pass);
 		response.setContentType("text/html; charset=GBK");
-		// 登录成功
+		// 鐧诲綍鎴愬姛
 		if (userId > 0)
 		{
 			request.getSession(true).setAttribute("userId" , userId);
 		}
 		try
 		{
-			// 把验证的userId封装成JSONObject
+			// 鎶婇獙璇佺殑userId灏佽鎴怞SONObject
 			JSONObject jsonObj = new JSONObject()
-				.put("userId" , userId);
-			// 输出响应
+					.put("userId" , userId);
+			// 杈撳嚭鍝嶅簲
 			response.getWriter().println(jsonObj.toString());
 		}
 		catch (JSONException ex)

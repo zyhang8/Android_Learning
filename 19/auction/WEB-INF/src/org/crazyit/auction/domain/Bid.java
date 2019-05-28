@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -18,37 +18,37 @@ import javax.persistence.*;
 @Table(name="bid")
 public class Bid
 {
-	//±êÊ¶ÊôĞÔ
+	//æ ‡è¯†å±æ€§
 	@Id
 	@Column(name="bid_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	// ¾º¼ÛµÄ¼Û¸ñ
+	// ç«ä»·çš„ä»·æ ¼
 	@Column(name="bid_price")
 	private double bidPrice;
-	// ¾º¼ÛµÄÈÕÆÚ
+	// ç«ä»·çš„æ—¥æœŸ
 	@Column(name="bid_date")
 	private Date bidDate;
-	// ±¾´Î¾º¼ÛËù¾ºÅÄµÄÎïÆ·
+	// æœ¬æ¬¡ç«ä»·æ‰€ç«æ‹çš„ç‰©å“
 	@ManyToOne(targetEntity=Item.class)
 	@JoinColumn(name="item_id", nullable=false)
 	private Item bidItem;
-	// ²ÎÓë¾º¼ÛµÄÓÃ»§
+	// å‚ä¸ç«ä»·çš„ç”¨æˆ·
 	@ManyToOne(targetEntity=AuctionUser.class)
 	@JoinColumn(name="user_id", nullable=false)
 	private AuctionUser bidUser;
 
-	// ÎŞ²ÎÊıµÄ¹¹ÔìÆ÷
+	// æ— å‚æ•°çš„æ„é€ å™¨
 	public Bid()
 	{
 	}
-	// ³õÊ¼»¯»ù±¾ÊôĞÔµÄ¹¹ÔìÆ÷
+	// åˆå§‹åŒ–åŸºæœ¬å±æ€§çš„æ„é€ å™¨
 	public Bid(double bidPrice)
 	{
 		this.bidPrice = bidPrice;
 	}
 
-	// idÊôĞÔµÄsetterºÍgetter·½·¨
+	// idå±æ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setId(Integer id)
 	{
 		this.id = id;
@@ -58,7 +58,7 @@ public class Bid
 		return this.id;
 	}
 
-	// bidPriceµÄsetterºÍgetter·½·¨
+	// bidPriceçš„setterå’Œgetteræ–¹æ³•
 	public void setBidPrice(double bidPrice)
 	{
 		this.bidPrice = bidPrice;
@@ -68,7 +68,7 @@ public class Bid
 		return this.bidPrice;
 	}
 
-	// bidDateµÄsetterºÍgetter·½·¨
+	// bidDateçš„setterå’Œgetteræ–¹æ³•
 	public void setBidDate(Date bidDate)
 	{
 		this.bidDate = bidDate;
@@ -78,7 +78,7 @@ public class Bid
 		return this.bidDate;
 	}
 
-	// bidItemµÄsetterºÍgetter·½·¨
+	// bidItemçš„setterå’Œgetteræ–¹æ³•
 	public void setBidItem(Item bidItem)
 	{
 		this.bidItem = bidItem;
@@ -88,7 +88,7 @@ public class Bid
 		return this.bidItem;
 	}
 
-	// bidUserµÄsetterºÍgetter·½·¨
+	// bidUserçš„setterå’Œgetteræ–¹æ³•
 	public void setBidUser(AuctionUser bidUser)
 	{
 		this.bidUser = bidUser;
@@ -101,7 +101,7 @@ public class Bid
 	public int hashCode()
 	{
 		return bidUser.getUsername().hashCode()
-			+ bidItem.hashCode() * 13 + (int)bidPrice * 19;
+				+ bidItem.hashCode() * 13 + (int)bidPrice * 19;
 	}
 
 	public boolean equals(Object obj)
@@ -114,8 +114,8 @@ public class Bid
 		{
 			Bid bid = (Bid)obj;
 			if (bid.getBidUser().getUsername().equals(bidUser.getUsername())
-				&& bid.getBidItem().equals(this.getBidItem())
-				&& bid.getBidPrice() == this.getBidPrice())
+					&& bid.getBidItem().equals(this.getBidItem())
+					&& bid.getBidPrice() == this.getBidPrice())
 			{
 				return true;
 			}

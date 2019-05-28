@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -16,19 +16,19 @@ import java.util.Map;
  */
 public class AuthorityInterceptor extends AbstractInterceptor
 {
-	// 拦截用户请求
+	// 鎷︽埅鐢ㄦ埛璇锋眰
 	public String intercept(ActionInvocation invocation)
-		throws Exception
+			throws Exception
 	{
-		// 取得跟踪用户的HTTP Session
+		// 鍙栧緱璺熻釜鐢ㄦ埛鐨凥TTP Session
 		Map session = ActionContext.getContext().getSession();
 		Object userId = session.get("userId");
-		// 如果用户Session中userId属性为null，即用户还未登录
+		// 濡傛灉鐢ㄦ埛Session涓璾serId灞炴�т负null锛屽嵆鐢ㄦ埛杩樻湭鐧诲綍
 		if (userId == null)
 		{
 			return "login";
 		}
-		// 否则，继续执行目标Action的execute方法
+		// 鍚﹀垯锛岀户缁墽琛岀洰鏍嘇ction鐨別xecute鏂规硶
 		else
 		{
 			return invocation.invoke();

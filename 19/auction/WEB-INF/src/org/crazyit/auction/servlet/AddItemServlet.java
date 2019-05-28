@@ -12,7 +12,7 @@ import org.json.*;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -23,36 +23,36 @@ import org.json.*;
 @WebServlet(urlPatterns="/android/addItem.jsp")
 public class AddItemServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
-		// 获取userId
+		// 鑾峰彇userId
 		Integer userId = (Integer)request.getSession(true)
-			.getAttribute("userId");
+				.getAttribute("userId");
 		request.setCharacterEncoding("gbk");
-		// 解析请求参数
+		// 瑙ｆ瀽璇锋眰鍙傛暟
 		String itemName = request.getParameter("itemName");
 		String itemDesc = request.getParameter("itemDesc");
 		String remark = request.getParameter("itemRemark");
 		String initPrice = request.getParameter("initPrice");
 		String kindId = request.getParameter("kindId");
 		String avail = request.getParameter("availTime");
-		// 获取业务逻辑组件
+		// 鑾峰彇涓氬姟閫昏緫缁勪欢
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// 调用业务逻辑组件的方法来添加物品
+		// 璋冪敤涓氬姟閫昏緫缁勪欢鐨勬柟娉曟潵娣诲姞鐗╁搧
 		int itemId = auctionManager.addItem(new Item(itemName , itemDesc
-			, remark , Double.parseDouble(initPrice))
-			, Integer.parseInt(avail) , Integer.parseInt(kindId) , userId);
+						, remark , Double.parseDouble(initPrice))
+				, Integer.parseInt(avail) , Integer.parseInt(kindId) , userId);
 		response.setContentType("text/html; charset=GBK");
-		// 添加成功
+		// 娣诲姞鎴愬姛
 		if (itemId > 0)
 		{
-			response.getWriter().println("恭喜您，物品添加成功!");
+			response.getWriter().println("鎭枩鎮紝鐗╁搧娣诲姞鎴愬姛!");
 		}
 		else
 		{
-			response.getWriter().println("对不起，物品添加失败!");
+			response.getWriter().println("瀵逛笉璧凤紝鐗╁搧娣诲姞澶辫触!");
 		}
 	}
 }

@@ -10,7 +10,7 @@ import org.crazyit.auction.dao.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -19,22 +19,22 @@ import org.crazyit.auction.dao.*;
  * @version 1.0
  */
 public class AuctionUserDaoHibernate
-	extends BaseDaoHibernate4<AuctionUser> implements AuctionUserDao
+		extends BaseDaoHibernate4<AuctionUser> implements AuctionUserDao
 {
 
 	/**
-	 * ¸ù¾İÓÃ»§Ãû£¬ÃÜÂë²éÕÒÓÃ»§
-	 * @param username ²éÑ¯ËùĞèµÄÓÃ»§Ãû
-	 * @param pass ²éÑ¯ËùĞèµÄÃÜÂë
-	 * @return Ö¸¶¨ÓÃ»§Ãû¡¢ÃÜÂë¶ÔÓ¦µÄÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·åï¼Œå¯†ç æŸ¥æ‰¾ç”¨æˆ·
+	 * @param username æŸ¥è¯¢æ‰€éœ€çš„ç”¨æˆ·å
+	 * @param pass æŸ¥è¯¢æ‰€éœ€çš„å¯†ç 
+	 * @return æŒ‡å®šç”¨æˆ·åã€å¯†ç å¯¹åº”çš„ç”¨æˆ·
 	 */
 	public AuctionUser findUserByNameAndPass(String username , String pass)
 	{
-		// Ö´ĞĞHQL²éÑ¯
+		// æ‰§è¡ŒHQLæŸ¥è¯¢
 		List<AuctionUser> ul = (List<AuctionUser>)find(
-			"from AuctionUser au where au.username=?0 and au.userpass=?1" ,
-			username , pass);
-		// ·µ»Ø²éÑ¯µÃµ½µÄµÚÒ»¸öAuctionUser¶ÔÏó
+				"from AuctionUser au where au.username=?0 and au.userpass=?1" ,
+				username , pass);
+		// è¿”å›æŸ¥è¯¢å¾—åˆ°çš„ç¬¬ä¸€ä¸ªAuctionUserå¯¹è±¡
 		if (ul.size() == 1)
 		{
 			return (AuctionUser)ul.get(0);

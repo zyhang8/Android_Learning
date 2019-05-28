@@ -10,7 +10,7 @@ import org.crazyit.auction.action.base.BaseAction;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -28,13 +28,13 @@ public class ViewFailAction extends BaseAction
 		return SUCCESS;
 	}
 
-	// failItems的setter和getter方法
+	// failItems鐨剆etter鍜実etter鏂规硶
 	public void setFailItems(List<ItemBean> failItems)
 	{
 		this.failItems = failItems;
 	}
 	public List<ItemBean> getFailItems()
 	{
-		 return this.failItems;
+		return this.failItems;
 	}
 }

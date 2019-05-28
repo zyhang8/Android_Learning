@@ -10,7 +10,7 @@ import org.crazyit.auction.dao.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -19,47 +19,47 @@ import org.crazyit.auction.dao.*;
  * @version 1.0
  */
 public class ItemDaoHibernate
-	extends BaseDaoHibernate4<Item> implements ItemDao
+		extends BaseDaoHibernate4<Item> implements ItemDao
 {
 	/**
-	 * ¸ù¾İ²úÆ··ÖÀà£¬»ñÈ¡µ±Ç°ÅÄÂôµÄÈ«²¿ÉÌÆ·
-	 * @param kindId ÖÖÀàid;
-	 * @return ¸ÃÀàµÄÈ«²¿²úÆ·
+	 * æ ¹æ®äº§å“åˆ†ç±»ï¼Œè·å–å½“å‰æ‹å–çš„å…¨éƒ¨å•†å“
+	 * @param kindId ç§ç±»id;
+	 * @return è¯¥ç±»çš„å…¨éƒ¨äº§å“
 	 */
 	public List<Item> findItemByKind(Integer kindId)
 	{
 		return find(
-			"from Item as i where i.kind.id=?0 and i.itemState.id=1"
-			, kindId);
+				"from Item as i where i.kind.id=?0 and i.itemState.id=1"
+				, kindId);
 	}
 
 	/**
-	 * ¸ù¾İËùÓĞÕß²éÕÒ´¦ÓÚÅÄÂôÖĞµÄÎïÆ·
-	 * @param useId ËùÓĞÕßId;
-	 * @return Ö¸¶¨ÓÃ»§´¦ÓÚÅÄÂôÖĞµÄÈ«²¿ÎïÆ·
+	 * æ ¹æ®æ‰€æœ‰è€…æŸ¥æ‰¾å¤„äºæ‹å–ä¸­çš„ç‰©å“
+	 * @param useId æ‰€æœ‰è€…Id;
+	 * @return æŒ‡å®šç”¨æˆ·å¤„äºæ‹å–ä¸­çš„å…¨éƒ¨ç‰©å“
 	 */
 	public List<Item> findItemByOwner(Integer userId)
 	{
 		return (List<Item>)find(
-			"from Item as i where i.owner.id=?0 and i.itemState.id=1"
-			, userId);
+				"from Item as i where i.owner.id=?0 and i.itemState.id=1"
+				, userId);
 	}
 
 	/**
-	 * ¸ù¾İÓ®È¡Õß²éÕÒÎïÆ·
-	 * @param userId Ó®È¡ÕßId;
-	 * @return Ö¸¶¨ÓÃ»§Ó®È¡µÄÈ«²¿ÎïÆ·
+	 * æ ¹æ®èµ¢å–è€…æŸ¥æ‰¾ç‰©å“
+	 * @param userId èµ¢å–è€…Id;
+	 * @return æŒ‡å®šç”¨æˆ·èµ¢å–çš„å…¨éƒ¨ç‰©å“
 	 */
 	public List<Item> findItemByWiner(Integer userId)
 	{
 		return find("from Item as i where i.winer.id =?0 and i.itemState.id=2"
-			,userId);
+				,userId);
 	}
 
 	/**
-	 * ¸ù¾İÎïÆ·×´Ì¬²éÕÒÎïÆ·
-	 * @param stateId ×´Ì¬Id;
-	 * @return ¸Ã×´Ì¬ÏÂµÄÈ«²¿ÎïÆ·
+	 * æ ¹æ®ç‰©å“çŠ¶æ€æŸ¥æ‰¾ç‰©å“
+	 * @param stateId çŠ¶æ€Id;
+	 * @return è¯¥çŠ¶æ€ä¸‹çš„å…¨éƒ¨ç‰©å“
 	 */
 	public List<Item> findItemByState(Integer stateId)
 	{

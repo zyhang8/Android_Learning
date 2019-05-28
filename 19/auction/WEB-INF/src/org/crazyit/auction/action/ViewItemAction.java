@@ -11,7 +11,7 @@ import org.crazyit.auction.domain.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -29,7 +29,7 @@ public class ViewItemAction extends BaseAction
 	{
 		if (kindId <= 0)
 		{
-			addActionError("Äú±ØĞëÑ¡ÔñÓĞĞ§µÄÖÖÀà");
+			addActionError("æ‚¨å¿…é¡»é€‰æ‹©æœ‰æ•ˆçš„ç§ç±»");
 			return ERROR;
 		}
 		else
@@ -40,33 +40,33 @@ public class ViewItemAction extends BaseAction
 		}
 	}
 
-	// kindIdµÄsetterºÍgetter·½·¨
+	// kindIdçš„setterå’Œgetteræ–¹æ³•
 	public void setKindId(int kindId)
 	{
 		this.kindId = kindId;
 	}
 	public int getKindId()
 	{
-		 return this.kindId;
+		return this.kindId;
 	}
 
-	// kindµÄsetterºÍgetter·½·¨
+	// kindçš„setterå’Œgetteræ–¹æ³•
 	public void setKind(String kind)
 	{
 		this.kind = kind;
 	}
 	public String getKind()
 	{
-		 return this.kind;
+		return this.kind;
 	}
 
-	// itemsµÄsetterºÍgetter·½·¨
+	// itemsçš„setterå’Œgetteræ–¹æ³•
 	public void setItems(List<ItemBean> items)
 	{
 		this.items = items;
 	}
 	public List<ItemBean> getItems()
 	{
-		 return this.items;
+		return this.items;
 	}
 }

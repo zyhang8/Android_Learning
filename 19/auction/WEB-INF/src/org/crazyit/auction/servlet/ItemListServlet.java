@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -24,19 +24,19 @@ import java.util.*;
 @WebServlet(urlPatterns="/android/itemList.jsp")
 public class ItemListServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
 		request.setCharacterEncoding("gbk");
-		// »ñÈ¡ÎïÆ·ÖÖÀàID
+		// è·å–ç‰©å“ç§ç±»ID
 		String kindId = request.getParameter("kindId");
-		// »ñÈ¡ÒµÎñÂß¼­×é¼ş
+		// è·å–ä¸šåŠ¡é€»è¾‘ç»„ä»¶
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// µ÷ÓÃÒµÎñÂß¼­·½·¨À´»ñÈ¡È«²¿ÎïÆ·
+		// è°ƒç”¨ä¸šåŠ¡é€»è¾‘æ–¹æ³•æ¥è·å–å…¨éƒ¨ç‰©å“
 		List<ItemBean> items = auctionManager
-			.getItemsByKind(Integer.parseInt(kindId));
-		// ½«ÎïÆ·ÁĞ±í°ü×°³ÉJSONArray
+				.getItemsByKind(Integer.parseInt(kindId));
+		// å°†ç‰©å“åˆ—è¡¨åŒ…è£…æˆJSONArray
 		JSONArray jsonArr= new JSONArray(items);
 		response.setContentType("text/html; charset=GBK");
 		response.getWriter().println(jsonArr.toString());

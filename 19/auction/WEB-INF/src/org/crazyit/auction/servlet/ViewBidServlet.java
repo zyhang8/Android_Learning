@@ -13,7 +13,7 @@ import org.json.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -24,16 +24,16 @@ import org.json.*;
 @WebServlet(urlPatterns="/android/viewBid.jsp")
 public class ViewBidServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
-		// »ñÈ¡userId
+		// è·å–userId
 		Integer userId = (Integer)request.getSession(true)
-			.getAttribute("userId");
-		// »ñÈ¡ÒµÎñÂß¼­×é¼ş
+				.getAttribute("userId");
+		// è·å–ä¸šåŠ¡é€»è¾‘ç»„ä»¶
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// »ñÈ¡¸ÃÓÃ»§Ëù²ÎÓëµÄÈ«²¿¾º¼Û
+		// è·å–è¯¥ç”¨æˆ·æ‰€å‚ä¸çš„å…¨éƒ¨ç«ä»·
 		List<BidBean> bids = auctionManager.getBidByUser(userId);
 		JSONArray jsonArr= new JSONArray(bids);
 		response.setContentType("text/html; charset=GBK");

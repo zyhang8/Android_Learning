@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -18,34 +18,34 @@ import javax.persistence.*;
 @Table(name="kind")
 public class Kind
 {
-	// ±êÊ¶ÊôĞÔ
+	// æ ‡è¯†å±æ€§
 	@Id
 	@Column(name="kind_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	// ÖÖÀàÃû
+	// ç§ç±»å
 	@Column(name="kind_name")
 	private String kindName;
-	// ÖÖÀàÃèÊö
+	// ç§ç±»æè¿°
 	@Column(name="kind_desc")
 	private String kindDesc;
-	// ¸ÃÖÖÀàÏÂµÄËùÓĞÎïÆ·
+	// è¯¥ç§ç±»ä¸‹çš„æ‰€æœ‰ç‰©å“
 	@OneToMany(targetEntity=Item.class ,
-		mappedBy="kind")
+			mappedBy="kind")
 	private Set<Item> items = new HashSet<Item>();
 
-	// ÎŞ²ÎÊıµÄ¹¹ÔìÆ÷
+	// æ— å‚æ•°çš„æ„é€ å™¨
 	public Kind()
 	{
 	}
-	// ³õÊ¼»¯È«²¿»ù±¾ÊôĞÔµÄ¹¹ÔìÆ÷
+	// åˆå§‹åŒ–å…¨éƒ¨åŸºæœ¬å±æ€§çš„æ„é€ å™¨
 	public Kind(String kindName , String kindDesc)
 	{
 		this.kindName = kindName;
 		this.kindDesc = kindDesc;
 	}
 
-	// idµÄsetterºÍgetter·½·¨
+	// idçš„setterå’Œgetteræ–¹æ³•
 	public void setId(Integer id)
 	{
 		this.id = id;
@@ -55,7 +55,7 @@ public class Kind
 		return this.id;
 	}
 
-	// kindNameµÄsetterºÍgetter·½·¨
+	// kindNameçš„setterå’Œgetteræ–¹æ³•
 	public void setKindName(String kindName)
 	{
 		this.kindName = kindName;
@@ -65,7 +65,7 @@ public class Kind
 		return this.kindName;
 	}
 
-	// kindDescµÄsetterºÍgetter·½·¨
+	// kindDescçš„setterå’Œgetteræ–¹æ³•
 	public void setKindDesc(String kindDesc)
 	{
 		this.kindDesc = kindDesc;
@@ -75,7 +75,7 @@ public class Kind
 		return this.kindDesc;
 	}
 
-	// itemsµÄsetterºÍgetter·½·¨
+	// itemsçš„setterå’Œgetteræ–¹æ³•
 	public void setItems(Set<Item> items)
 	{
 		this.items = items;

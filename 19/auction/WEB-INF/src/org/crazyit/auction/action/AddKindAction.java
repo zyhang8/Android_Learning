@@ -10,7 +10,7 @@ import org.crazyit.auction.action.base.BaseAction;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -35,12 +35,12 @@ public class AddKindAction extends BaseAction
 		}
 		else
 		{
-			addActionError("ÑéÖ¤Âë²»Æ¥Åä,ÇëÖØĞÂÊäÈë");
+			addActionError("éªŒè¯ç ä¸åŒ¹é…,è¯·é‡æ–°è¾“å…¥");
 			return INPUT;
 		}
 	}
 
-	// kindµÄsetterºÍgetter·½·¨
+	// kindçš„setterå’Œgetteræ–¹æ³•
 	public void setKind(Kind kind)
 	{
 		this.kind = kind;
@@ -50,7 +50,7 @@ public class AddKindAction extends BaseAction
 		return this.kind;
 	}
 
-	// vercodeµÄsetterºÍgetter·½·¨
+	// vercodeçš„setterå’Œgetteræ–¹æ³•
 	public void setVercode(String vercode)
 	{
 		this.vercode = vercode;

@@ -7,7 +7,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.context.ApplicationContext;
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -19,14 +19,14 @@ public class BaseServlet extends HttpServlet
 {
 	private ApplicationContext ctx;
 	public void init(ServletConfig config)
-		throws ServletException
+			throws ServletException
 	{
 		super.init(config);
-		// 获取Web应用中的ApplicationContext实例
+		// 鑾峰彇Web搴旂敤涓殑ApplicationContext瀹炰緥
 		ctx = WebApplicationContextUtils
-			.getWebApplicationContext(getServletContext());
+				.getWebApplicationContext(getServletContext());
 	}
-	// 返回Web应用中的Spring容器
+	// 杩斿洖Web搴旂敤涓殑Spring瀹瑰櫒
 	public ApplicationContext getCtx()
 	{
 		return this.ctx;

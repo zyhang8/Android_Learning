@@ -8,7 +8,7 @@ import java.io.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -20,28 +20,28 @@ import java.io.*;
 public class Authority implements Filter
 {
 	public void init(FilterConfig config)
-		throws ServletException {}
+			throws ServletException {}
 
-    public void doFilter(ServletRequest request,
-		ServletResponse response, FilterChain chain)
-		throws IOException , ServletException
+	public void doFilter(ServletRequest request,
+						 ServletResponse response, FilterChain chain)
+			throws IOException , ServletException
 	{
 		HttpServletRequest hrequest = (HttpServletRequest)request;
-		// »ñÈ¡HttpSession¶ÔÏó
+		// è·å–HttpSessionå¯¹è±¡
 		HttpSession session = hrequest.getSession(true);
 		Integer userId = (Integer)session.getAttribute("userId");
-		// Èç¹ûÓÃ»§ÒÑ¾­µÇÂ¼£¬»òÓÃ»§ÕıÔÚµÇÂ¼
+		// å¦‚æœç”¨æˆ·å·²ç»ç™»å½•ï¼Œæˆ–ç”¨æˆ·æ­£åœ¨ç™»å½•
 		if ((userId != null && userId > 0)
-			|| hrequest.getRequestURI().endsWith("/login.jsp"))
+				|| hrequest.getRequestURI().endsWith("/login.jsp"))
 		{
-			// ¡°·ÅĞĞ¡±ÇëÇó
+			// â€œæ”¾è¡Œâ€è¯·æ±‚
 			chain.doFilter(request , response);
 		}
 		else
 		{
 			response.setContentType("text/html; charset=GBK");
-			// Éú³É´íÎóÌáÊ¾¡£
-			response.getWriter().println("Äú»¹Ã»ÓĞµÇÂ¼ÏµÍ³£¬ÇëÏÈµÇÂ¼ÏµÍ³£¡");
+			// ç”Ÿæˆé”™è¯¯æç¤ºã€‚
+			response.getWriter().println("æ‚¨è¿˜æ²¡æœ‰ç™»å½•ç³»ç»Ÿï¼Œè¯·å…ˆç™»å½•ç³»ç»Ÿï¼");
 		}
 	}
 

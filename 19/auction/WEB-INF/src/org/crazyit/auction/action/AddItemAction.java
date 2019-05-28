@@ -10,7 +10,7 @@ import org.crazyit.auction.action.base.BaseAction;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -18,84 +18,75 @@ import org.crazyit.auction.action.base.BaseAction;
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */
-public class AddItemAction extends BaseAction
-{
+public class AddItemAction extends BaseAction {
 	private Item item;
 	private int avail;
 	private int kindId;
 	private String vercode;
-	// ´¦ÀíÓÃ»§ÇëÇóµÄexecute·½·¨
-	public String execute() throws Exception
-	{
+
+	// å¤„ç†ç”¨æˆ·è¯·æ±‚çš„executeæ–¹æ³•
+	public String execute() throws Exception {
 		Map session = ActionContext.getContext().getSession();
-		String ver2 = (String)session.get("rand");
-		// Ç¿ÖÆÏµÍ³¸ÕÉú³ÉµÄËæ»úÑéÖ¤ÂëÊ§Ğ§
-		session.put("rand" , null);
-		Integer userId = (Integer)session.get("userId");
-		// Èç¹ûÓÃ»§ÊäÈëµÄÑéÖ¤ÂëÓëÏµÍ³Ëæ»ú²úÉúµÄÑéÖ¤ÂëÏàÍ¬
-		if (vercode.equals(ver2))
-		{
-			// ¸ù¾İÓÃ»§Ñ¡ÔñÓĞĞ§Ê±¼äÑ¡Ïî£¬Ö¸¶¨Êµ¼ÊµÄÓĞĞ§Ê±¼ä
-			switch(avail)
-			{
-				case 6 :
+		String ver2 = (String) session.get("rand");
+		// å¼ºåˆ¶ç³»ç»Ÿåˆšç”Ÿæˆçš„éšæœºéªŒè¯ç å¤±æ•ˆ
+		session.put("rand", null);
+		Integer userId = (Integer) session.get("userId");
+		// å¦‚æœç”¨æˆ·è¾“å…¥çš„éªŒè¯ç ä¸ç³»ç»Ÿéšæœºäº§ç”Ÿçš„éªŒè¯ç ç›¸åŒ
+		if (vercode.equals(ver2)) {
+			// æ ¹æ®ç”¨æˆ·é€‰æ‹©æœ‰æ•ˆæ—¶é—´é€‰é¡¹ï¼ŒæŒ‡å®šå®é™…çš„æœ‰æ•ˆæ—¶é—´
+			switch (avail) {
+				case 6:
 					avail = 7;
 					break;
-				case 7 :
+				case 7:
 					avail = 30;
 					break;
-				case 8 :
+				case 8:
 					avail = 365;
 					break;
 			}
-			// Ìí¼ÓÎïÆ·
-			mgr.addItem(item ,avail , kindId, userId);
+			// æ·»åŠ ç‰©å“
+			mgr.addItem(item, avail, kindId, userId);
 			return SUCCESS;
-		}
-		else
-		{
-			addActionError("ÑéÖ¤Âë²»Æ¥Åä,ÇëÖØĞÂÊäÈë");
+		} else {
+			addActionError("éªŒè¯ç ä¸åŒ¹é…,è¯·é‡æ–°è¾“å…¥");
 			return INPUT;
 		}
 	}
 
-	// itemµÄsetterºÍgetter·½·¨
-	public void setItem(Item item)
-	{
+	// itemçš„setterå’Œgetteræ–¹æ³•
+	public void setItem(Item item) {
 		this.item = item;
 	}
-	public Item getItem()
-	{
+
+	public Item getItem() {
 		return this.item;
 	}
 
-	// availµÄsetterºÍgetter·½·¨
-	public void setAvail(int avail)
-	{
+	// availçš„setterå’Œgetteræ–¹æ³•
+	public void setAvail(int avail) {
 		this.avail = avail;
 	}
-	public int getAvail()
-	{
+
+	public int getAvail() {
 		return this.avail;
 	}
 
-	// kindIdµÄsetterºÍgetter·½·¨
-	public void setKindId(int kindId)
-	{
+	// kindIdçš„setterå’Œgetteræ–¹æ³•
+	public void setKindId(int kindId) {
 		this.kindId = kindId;
 	}
-	public int getKindId()
-	{
+
+	public int getKindId() {
 		return this.kindId;
 	}
 
-	// vercodeµÄsetterºÍgetter·½·¨
-	public void setVercode(String vercode)
-	{
+	// vercodeçš„setterå’Œgetteræ–¹æ³•
+	public void setVercode(String vercode) {
 		this.vercode = vercode;
 	}
-	public String getVercode()
-	{
+
+	public String getVercode() {
 		return this.vercode;
 	}
 }

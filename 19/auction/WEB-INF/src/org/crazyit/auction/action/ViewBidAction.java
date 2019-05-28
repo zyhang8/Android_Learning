@@ -1,3 +1,4 @@
+
 package org.crazyit.auction.action;
 
 import java.util.*;
@@ -10,7 +11,7 @@ import org.crazyit.auction.action.base.BaseAction;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -30,13 +31,13 @@ public class ViewBidAction extends BaseAction
 		return SUCCESS;
 	}
 
-	// bids的setter和getter方法
+	// bids鐨剆etter鍜実etter鏂规硶
 	public void setBids(List<BidBean> bids)
 	{
 		this.bids = bids;
 	}
 	public List<BidBean> getBids()
 	{
-		 return this.bids;
+		return this.bids;
 	}
 }

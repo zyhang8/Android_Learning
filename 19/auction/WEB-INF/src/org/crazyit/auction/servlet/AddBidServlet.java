@@ -12,7 +12,7 @@ import org.json.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2011-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -23,32 +23,32 @@ import org.json.*;
 @WebServlet(urlPatterns="/android/addBid.jsp")
 public class AddBidServlet extends BaseServlet
 {
-    public void service(HttpServletRequest request ,
-		HttpServletResponse response)
-		throws IOException , ServletException
+	public void service(HttpServletRequest request ,
+						HttpServletResponse response)
+			throws IOException , ServletException
 	{
-		// »ñÈ¡userId
+		// è·å–userId
 		Integer userId = (Integer)request.getSession(true)
-			.getAttribute("userId");
+				.getAttribute("userId");
 		request.setCharacterEncoding("gbk");
-		// »ñÈ¡ÇëÇó²ÎÊı
+		// è·å–è¯·æ±‚å‚æ•°
 		String itemId = request.getParameter("itemId");
 		String bidPrice = request.getParameter("bidPrice");
-		// »ñÈ¡ÒµÎñÂß¼­×é¼ş
+		// è·å–ä¸šåŠ¡é€»è¾‘ç»„ä»¶
 		AuctionManager auctionManager = (AuctionManager)getCtx().getBean("mgr");
-		// µ÷ÓÃÒµÎñ·½·¨À´Ìí¼Ó¾º¼Û
+		// è°ƒç”¨ä¸šåŠ¡æ–¹æ³•æ¥æ·»åŠ ç«ä»·
 		int bidId = auctionManager.addBid(Integer.parseInt(itemId)
-			, new Bid(Double.parseDouble(bidPrice))
-			, userId);
+				, new Bid(Double.parseDouble(bidPrice))
+				, userId);
 		response.setContentType("text/html; charset=GBK");
-		// ¾º¼Û³É¹¦
+		// ç«ä»·æˆåŠŸ
 		if (bidId > 0)
 		{
-			response.getWriter().println("¹§Ï²Äú£¬¾º¼Û³É¹¦!");
+			response.getWriter().println("æ­å–œæ‚¨ï¼Œç«ä»·æˆåŠŸ!");
 		}
 		else
 		{
-			response.getWriter().println("¶Ô²»Æğ£¬¾º¼ÛÊ§°Ü!");
+			response.getWriter().println("å¯¹ä¸èµ·ï¼Œç«ä»·å¤±è´¥!");
 		}
 	}
 }

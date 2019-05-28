@@ -9,7 +9,7 @@ import org.crazyit.auction.business.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -20,18 +20,18 @@ import org.crazyit.auction.business.*;
 public interface BidDao extends BaseDao<Bid>
 {
 	/**
-	 * ¸ù¾İÓÃ»§²éÕÒ¾º¼Û
-	 * @param id ÓÃ»§id
-	 * @return ÓÃ»§¶ÔÓ¦µÄÈ«²¿
-	 * @return ÓÃ»§¶ÔÓ¦µÄÈ«²¿¾º¼Û
+	 * æ ¹æ®ç”¨æˆ·æŸ¥æ‰¾ç«ä»·
+	 * @param id ç”¨æˆ·id
+	 * @return ç”¨æˆ·å¯¹åº”çš„å…¨éƒ¨
+	 * @return ç”¨æˆ·å¯¹åº”çš„å…¨éƒ¨ç«ä»·
 	 */
 	List<Bid> findByUser(Integer userId);
 
 	/**
-	 * ¸ù¾İÎïÆ·id£¬ÒÔ¼°³ö¼Û²éÑ¯ÓÃ»§
-	 * @param itemId ÎïÆ·id;
-	 * @param price ¾º¼ÛµÄ¼Û¸ñ
-	 * @return ¶ÔÖ¸¶¨ÎïÆ·¡¢Ö¸¶¨¾º¼Û¶ÔÓ¦µÄÓÃ»§
+	 * æ ¹æ®ç‰©å“idï¼Œä»¥åŠå‡ºä»·æŸ¥è¯¢ç”¨æˆ·
+	 * @param itemId ç‰©å“id;
+	 * @param price ç«ä»·çš„ä»·æ ¼
+	 * @return å¯¹æŒ‡å®šç‰©å“ã€æŒ‡å®šç«ä»·å¯¹åº”çš„ç”¨æˆ·
 	 */
 	AuctionUser findUserByItemAndPrice(Integer itemId , Double price);
 }

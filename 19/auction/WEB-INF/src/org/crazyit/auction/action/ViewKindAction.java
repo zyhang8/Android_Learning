@@ -10,7 +10,7 @@ import org.crazyit.auction.action.base.BaseAction;
 
 /**
  * Description:
- * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>
+ * <br/>缃戠珯: <a href="http://www.crazyit.org">鐤媯Java鑱旂洘</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -29,23 +29,23 @@ public class ViewKindAction extends BaseAction
 		return SUCCESS;
 	}
 
-	// kinds的setter和getter方法
+	// kinds鐨剆etter鍜実etter鏂规硶
 	public void setKinds(List<KindBean> kinds)
 	{
 		this.kinds = kinds;
 	}
 	public List<KindBean> getKinds()
 	{
-		 return this.kinds;
+		return this.kinds;
 	}
 
-	// errMsg的setter和getter方法
+	// errMsg鐨剆etter鍜実etter鏂规硶
 	public void setErrMsg(String errMsg)
 	{
 		this.errMsg = errMsg;
 	}
 	public String getErrMsg()
 	{
-		 return this.errMsg;
+		return this.errMsg;
 	}
 }

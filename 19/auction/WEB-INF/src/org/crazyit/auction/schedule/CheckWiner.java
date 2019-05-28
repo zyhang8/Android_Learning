@@ -7,7 +7,7 @@ import org.crazyit.auction.exception.AuctionException;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -17,14 +17,14 @@ import org.crazyit.auction.exception.AuctionException;
  */
 public class CheckWiner
 {
-	// ¸ÃÈÎÎñËùÒÀÀµÒµÎñÂß¼­×é¼ş
+	// è¯¥ä»»åŠ¡æ‰€ä¾èµ–ä¸šåŠ¡é€»è¾‘ç»„ä»¶
 	private AuctionManager mgr;
-	// ÒÀÀµ×¢ÈëÒµÎñÂß¼­×é¼ş±ØĞëµÄsetter·½·¨
+	// ä¾èµ–æ³¨å…¥ä¸šåŠ¡é€»è¾‘ç»„ä»¶å¿…é¡»çš„setteræ–¹æ³•
 	public void setMgr(AuctionManager mgr)
 	{
 		this.mgr = mgr;
 	}
-	// ¸ÃÈÎÎñµÄÖ´ĞĞÌå
+	// è¯¥ä»»åŠ¡çš„æ‰§è¡Œä½“
 	public void check()
 	{
 		try

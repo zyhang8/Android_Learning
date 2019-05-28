@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -15,18 +15,18 @@ import java.io.Serializable;
  */
 public interface BaseDao<T>
 {
-	// ¸ù¾İID¼ÓÔØÊµÌå
+	// æ ¹æ®IDåŠ è½½å®ä½“
 	T get(Class<T> entityClazz , Serializable id);
-	// ±£´æÊµÌå
+	// ä¿å­˜å®ä½“
 	Serializable save(T entity);
-	// ¸üĞÂÊµÌå
+	// æ›´æ–°å®ä½“
 	void update(T entity);
-	// É¾³ıÊµÌå
+	// åˆ é™¤å®ä½“
 	void delete(T entity);
-	// ¸ù¾İIDÉ¾³ıÊµÌå
+	// æ ¹æ®IDåˆ é™¤å®ä½“
 	void delete(Class<T> entityClazz , Serializable id);
-	// »ñÈ¡ËùÓĞÊµÌå
+	// è·å–æ‰€æœ‰å®ä½“
 	List<T> findAll(Class<T> entityClazz);
-	// »ñÈ¡ÊµÌå×ÜÊı
+	// è·å–å®ä½“æ€»æ•°
 	long findCount(Class<T> entityClazz);
 }

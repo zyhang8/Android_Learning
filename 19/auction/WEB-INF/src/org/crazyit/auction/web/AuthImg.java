@@ -11,7 +11,7 @@ import javax.imageio.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -22,13 +22,13 @@ import javax.imageio.*;
 @WebServlet(urlPatterns={"/auth.jpg"})
 public class AuthImg extends HttpServlet
 {
-	// ¶¨ÒåÍ¼ĞÎÑéÖ¤ÂëÖĞ»æÖÆ×Ö·ûµÄ×ÖÌå
+	// å®šä¹‰å›¾å½¢éªŒè¯ç ä¸­ç»˜åˆ¶å­—ç¬¦çš„å­—ä½“
 	private final Font mFont =
-		new Font("Arial Black", Font.PLAIN, 16);
-	// ¶¨ÒåÍ¼ĞÎÑéÖ¤ÂëµÄ´óĞ¡
+			new Font("Arial Black", Font.PLAIN, 16);
+	// å®šä¹‰å›¾å½¢éªŒè¯ç çš„å¤§å°
 	private final int IMG_WIDTH = 100;
 	private final int IMG_HEIGTH = 18;
-	// ¶¨ÒåÒ»¸ö»ñÈ¡Ëæ»úÑÕÉ«µÄ·½·¨
+	// å®šä¹‰ä¸€ä¸ªè·å–éšæœºé¢œè‰²çš„æ–¹æ³•
 	private Color getRandColor(int fc,int bc)
 	{
 		Random random = new Random();
@@ -37,31 +37,31 @@ public class AuthImg extends HttpServlet
 		int r = fc + random.nextInt(bc - fc);
 		int g = fc + random.nextInt(bc - fc);
 		int b = fc + random.nextInt(bc - fc);
-		// µÃµ½Ëæ»úÑÕÉ«
+		// å¾—åˆ°éšæœºé¢œè‰²
 		return new Color(r , g , b);
 	}
-	// ÖØĞ´service·½·¨£¬Éú³É¶Ô¿Í»§¶ËµÄÏìÓ¦
+	// é‡å†™serviceæ–¹æ³•ï¼Œç”Ÿæˆå¯¹å®¢æˆ·ç«¯çš„å“åº”
 	public void service(HttpServletRequest request,
-		HttpServletResponse response)
-		throws ServletException, IOException
+						HttpServletResponse response)
+			throws ServletException, IOException
 	{
-		// ÉèÖÃ½ûÖ¹»º´æ
+		// è®¾ç½®ç¦æ­¢ç¼“å­˜
 		response.setHeader("Pragma","No-cache");
 		response.setHeader("Cache-Control","no-cache");
 		response.setDateHeader("Expires", 0);
 		response.setContentType("image/jpeg");
 		BufferedImage image = new BufferedImage
-			(IMG_WIDTH , IMG_HEIGTH , BufferedImage.TYPE_INT_RGB);
+				(IMG_WIDTH , IMG_HEIGTH , BufferedImage.TYPE_INT_RGB);
 		Graphics g = image.getGraphics();
 		Random random = new Random();
 		g.setColor(getRandColor(200 , 250));
-		// Ìî³ä±³¾°É«
+		// å¡«å……èƒŒæ™¯è‰²
 		g.fillRect(1, 1, IMG_WIDTH - 1, IMG_HEIGTH - 1);
-		// ÎªÍ¼ĞÎÑéÖ¤Âë»æÖÆ±ß¿ò
+		// ä¸ºå›¾å½¢éªŒè¯ç ç»˜åˆ¶è¾¹æ¡†
 		g.setColor(new Color(102 , 102 , 102));
 		g.drawRect(0, 0, IMG_WIDTH - 1, IMG_HEIGTH - 1);
 		g.setColor(getRandColor(160,200));
-		// Éú³ÉËæ»ú¸ÉÈÅÏß
+		// ç”Ÿæˆéšæœºå¹²æ‰°çº¿
 		for (int i = 0 ; i < 80 ; i++)
 		{
 			int x = random.nextInt(IMG_WIDTH - 1);
@@ -71,7 +71,7 @@ public class AuthImg extends HttpServlet
 			g.drawLine(x , y , x + xl , y + yl);
 		}
 		g.setColor(getRandColor(160,200));
-		// Éú³ÉËæ»ú¸ÉÈÅÏß
+		// ç”Ÿæˆéšæœºå¹²æ‰°çº¿
 		for (int i = 0 ; i < 80 ; i++)
 		{
 			int x = random.nextInt(IMG_WIDTH - 1);
@@ -80,49 +80,49 @@ public class AuthImg extends HttpServlet
 			int yl = random.nextInt(6) + 1;
 			g.drawLine(x , y , x - xl , y - yl);
 		}
-		// ÉèÖÃ»æÖÆ×Ö·ûµÄ×ÖÌå
+		// è®¾ç½®ç»˜åˆ¶å­—ç¬¦çš„å­—ä½“
 		g.setFont(mFont);
-		// ÓÃÓÚ±£´æÏµÍ³Éú³ÉµÄËæ»ú×Ö·û´®
+		// ç”¨äºä¿å­˜ç³»ç»Ÿç”Ÿæˆçš„éšæœºå­—ç¬¦ä¸²
 		String sRand = "";
 		for (int i = 0 ; i < 6 ; i++)
 		{
 			String tmp = getRandomChar();
 			sRand += tmp;
-			// »ñÈ¡Ëæ»úÑÕÉ«
+			// è·å–éšæœºé¢œè‰²
 			g.setColor(new Color(20 + random.nextInt(110)
-				,20 + random.nextInt(110)
-				,20 + random.nextInt(110)));
-			// ÔÚÍ¼Æ¬ÉÏ»æÖÆÏµÍ³Éú³ÉµÄËæ»ú×Ö·û
+					,20 + random.nextInt(110)
+					,20 + random.nextInt(110)));
+			// åœ¨å›¾ç‰‡ä¸Šç»˜åˆ¶ç³»ç»Ÿç”Ÿæˆçš„éšæœºå­—ç¬¦
 			g.drawString(tmp , 15 * i + 10,15);
 		}
-		// »ñÈ¡HttpSesssion¶ÔÏó
+		// è·å–HttpSesssionå¯¹è±¡
 		HttpSession session = request.getSession(true);
-		// ½«Ëæ»ú×Ö·û´®·ÅÈëHttpSesssion¶ÔÏóÖĞ
+		// å°†éšæœºå­—ç¬¦ä¸²æ”¾å…¥HttpSesssionå¯¹è±¡ä¸­
 		session.setAttribute("rand" , sRand);
 		g.dispose();
-		// ÏòÊä³öÁ÷ÖĞÊä³öÍ¼Æ¬
+		// å‘è¾“å‡ºæµä¸­è¾“å‡ºå›¾ç‰‡
 		ImageIO.write(image, "JPEG", response.getOutputStream());
 	}
-	// ¶¨Òå»ñÈ¡Ëæ»ú×Ö·û´®·½·¨
+	// å®šä¹‰è·å–éšæœºå­—ç¬¦ä¸²æ–¹æ³•
 	private String getRandomChar()
 	{
-		// Éú³ÉÒ»¸ö0¡¢1¡¢2µÄËæ»úÊı×Ö
+		// ç”Ÿæˆä¸€ä¸ª0ã€1ã€2çš„éšæœºæ•°å­—
 		int rand = (int)Math.round(Math.random() * 2);
 		long itmp = 0;
 		char ctmp = '\u0000';
 		switch (rand)
 		{
-			// Éú³É´óĞ´×ÖÄ¸
+			// ç”Ÿæˆå¤§å†™å­—æ¯
 			case 1:
 				itmp = Math.round(Math.random() * 25 + 65);
 				ctmp = (char)itmp;
 				return String.valueOf(ctmp);
-			// Éú³ÉĞ¡Ğ´×ÖÄ¸
+			// ç”Ÿæˆå°å†™å­—æ¯
 			case 2:
 				itmp = Math.round(Math.random() * 25 + 97);
 				ctmp = (char)itmp;
 				return String.valueOf(ctmp);
-			// Éú³ÉÊı×Ö
+			// ç”Ÿæˆæ•°å­—
 			default :
 				itmp = Math.round(Math.random() * 9);
 				return  itmp + "";

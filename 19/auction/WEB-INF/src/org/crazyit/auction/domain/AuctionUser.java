@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -18,38 +18,38 @@ import javax.persistence.*;
 @Table(name="auction_user")
 public class AuctionUser
 {
-	// ±êÊ¶ÊôĞÔ
+	// æ ‡è¯†å±æ€§
 	@Id
 	@Column(name="user_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	// ÓÃ»§ÃûÊôĞÔ
+	// ç”¨æˆ·åå±æ€§
 	private String username;
-	// ÃÜÂëÊôĞÔ
+	// å¯†ç å±æ€§
 	private String userpass;
-	// µç×ÓÓÊ¼şÊôĞÔ
+	// ç”µå­é‚®ä»¶å±æ€§
 	private String email;
 
-	// ¸ù¾İÊôÖ÷¹ØÁªµÄÎïÆ·ÊµÌå
+	// æ ¹æ®å±ä¸»å…³è”çš„ç‰©å“å®ä½“
 	@OneToMany(targetEntity=Item.class ,
-		mappedBy="owner")
+			mappedBy="owner")
 	private Set<Item> itemsByOwner = new HashSet<Item>();
-	// ¸ù¾İÓ®È¡Õß¹ØÁªµÄÎïÆ·ÊµÌå
+	// æ ¹æ®èµ¢å–è€…å…³è”çš„ç‰©å“å®ä½“
 	@OneToMany(targetEntity=Item.class ,
-		mappedBy="winer")
+			mappedBy="winer")
 	private Set<Item> itemsByWiner = new HashSet<Item>();
-	// ¸ÃÓÃ»§Ëù²ÎÓëµÄÈ«²¿¾º¼Û
+	// è¯¥ç”¨æˆ·æ‰€å‚ä¸çš„å…¨éƒ¨ç«ä»·
 	@OneToMany(targetEntity=Bid.class ,
-		mappedBy="bidUser")
+			mappedBy="bidUser")
 	private Set<Bid> bids = new HashSet<Bid>();
 
-	// ÎŞ²ÎÊıµÄ¹¹ÔìÆ÷
+	// æ— å‚æ•°çš„æ„é€ å™¨
 	public AuctionUser()
 	{
 	}
-	// ³õÊ¼»¯È«²¿³ÉÔ±±äÁ¿µÄ¹¹ÔìÆ÷
+	// åˆå§‹åŒ–å…¨éƒ¨æˆå‘˜å˜é‡çš„æ„é€ å™¨
 	public AuctionUser(Integer id , String username
-		, String userpass , String email)
+			, String userpass , String email)
 	{
 		this.id = id;
 		this.username = username;
@@ -57,7 +57,7 @@ public class AuctionUser
 		this.email = email;
 	}
 
-	// idµÄsetterºÍgetter·½·¨
+	// idçš„setterå’Œgetteræ–¹æ³•
 	public void setId(Integer id)
 	{
 		this.id = id;
@@ -67,7 +67,7 @@ public class AuctionUser
 		return this.id;
 	}
 
-	// usernameµÄsetterºÍgetter·½·¨
+	// usernameçš„setterå’Œgetteræ–¹æ³•
 	public void setUsername(String username)
 	{
 		this.username = username;
@@ -77,7 +77,7 @@ public class AuctionUser
 		return this.username;
 	}
 
-	// userpassµÄsetterºÍgetter·½·¨
+	// userpassçš„setterå’Œgetteræ–¹æ³•
 	public void setUserpass(String userpass)
 	{
 		this.userpass = userpass;
@@ -87,7 +87,7 @@ public class AuctionUser
 		return this.userpass;
 	}
 
-	// emailµÄsetterºÍgetter·½·¨
+	// emailçš„setterå’Œgetteræ–¹æ³•
 	public void setEmail(String email)
 	{
 		this.email = email;
@@ -97,7 +97,7 @@ public class AuctionUser
 		return this.email;
 	}
 
-	// itemsByOwnerµÄsetterºÍgetter·½·¨
+	// itemsByOwnerçš„setterå’Œgetteræ–¹æ³•
 	public void setItemsByOwner(Set<Item> itemsByOwner)
 	{
 		this.itemsByOwner = itemsByOwner;
@@ -107,7 +107,7 @@ public class AuctionUser
 		return this.itemsByOwner;
 	}
 
-	// itemsByWinerµÄsetterºÍgetter·½·¨
+	// itemsByWinerçš„setterå’Œgetteræ–¹æ³•
 	public void setItemsByWiner(Set<Item> itemsByWiner)
 	{
 		this.itemsByWiner = itemsByWiner;
@@ -117,7 +117,7 @@ public class AuctionUser
 		return this.itemsByWiner;
 	}
 
-	// bidsµÄsetterºÍgetter·½·¨
+	// bidsçš„setterå’Œgetteræ–¹æ³•
 	public void setBids(Set<Bid> bids)
 	{
 		this.bids = bids;

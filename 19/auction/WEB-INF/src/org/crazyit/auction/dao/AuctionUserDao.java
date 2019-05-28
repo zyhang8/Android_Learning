@@ -9,7 +9,7 @@ import org.crazyit.auction.business.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -20,10 +20,10 @@ import org.crazyit.auction.business.*;
 public interface AuctionUserDao extends BaseDao<AuctionUser>
 {
 	/**
-	 * ¸ù¾İÓÃ»§Ãû£¬ÃÜÂë²éÕÒÓÃ»§
-	 * @param username ²éÑ¯ËùĞèµÄÓÃ»§Ãû
-	 * @param pass ²éÑ¯ËùĞèµÄÃÜÂë
-	 * @return Ö¸¶¨ÓÃ»§Ãû¡¢ÃÜÂë¶ÔÓ¦µÄÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·åï¼Œå¯†ç æŸ¥æ‰¾ç”¨æˆ·
+	 * @param username æŸ¥è¯¢æ‰€éœ€çš„ç”¨æˆ·å
+	 * @param pass æŸ¥è¯¢æ‰€éœ€çš„å¯†ç 
+	 * @return æŒ‡å®šç”¨æˆ·åã€å¯†ç å¯¹åº”çš„ç”¨æˆ·
 	 */
 	AuctionUser findUserByNameAndPass(String username , String pass);
 }

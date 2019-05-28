@@ -18,9 +18,9 @@
 	<!-- 定义数据源Bean，使用C3P0数据源实现 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		p:driverClass="com.mysql.jdbc.Driver"
-		p:jdbcUrl="jdbc:mysql://localhost:3306/auction"
+		p:jdbcUrl="jdbc:mysql://localhost:3306/android_test"
 		p:user="root"
-		p:password="32147"
+		p:password="52linfeibaby"
 		p:maxPoolSize="200"
 		p:minPoolSize="2"
 		p:initialPoolSize="2"

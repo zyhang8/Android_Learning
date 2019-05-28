@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -28,14 +28,14 @@ public class ItemBean
 	private Date addTime;
 	private Date endTime;
 
-	// ÎÞ²ÎÊýµÄ¹¹ÔìÆ÷
+	// æ— å‚æ•°çš„æž„é€ å™¨
 	public ItemBean()
 	{
 	}
-	// ³õÊ¼»¯È«²¿ÊôÐÔµÄ¹¹ÔìÆ÷
+	// åˆå§‹åŒ–å…¨éƒ¨å±žæ€§çš„æž„é€ å™¨
 	public ItemBean(Integer id , String name , String desc , String remark,
-		String kind , String owner , String winer , String state ,
-		double initPrice , double maxPrice , Date addTime , Date endTime)
+					String kind , String owner , String winer , String state ,
+					double initPrice , double maxPrice , Date addTime , Date endTime)
 	{
 		this.id = id;
 		this.name = name;
@@ -51,7 +51,7 @@ public class ItemBean
 		this.endTime = endTime;
 	}
 
-	// idÊôÐÔµÄsetterºÍgetter·½·¨
+	// idå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setId(Integer id)
 	{
 		this.id = id;
@@ -61,7 +61,7 @@ public class ItemBean
 		return this.id;
 	}
 
-	// nameÊôÐÔµÄsetterºÍgetter·½·¨
+	// nameå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setName(String name)
 	{
 		this.name = name;
@@ -71,7 +71,7 @@ public class ItemBean
 		return this.name;
 	}
 
-	// descÊôÐÔµÄsetterºÍgetter·½·¨
+	// descå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setDesc(String desc)
 	{
 		this.desc = desc;
@@ -81,7 +81,7 @@ public class ItemBean
 		return this.desc;
 	}
 
-	// remarkÊôÐÔµÄsetterºÍgetter·½·¨
+	// remarkå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setRemark(String remark)
 	{
 		this.remark = remark;
@@ -91,7 +91,7 @@ public class ItemBean
 		return this.remark;
 	}
 
-	// kindÊôÐÔµÄsetterºÍgetter·½·¨
+	// kindå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setKind(String kind)
 	{
 		this.kind = kind;
@@ -101,7 +101,7 @@ public class ItemBean
 		return this.kind;
 	}
 
-	// ownerÊôÐÔµÄsetterºÍgetter·½·¨
+	// ownerå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setOwner(String owner)
 	{
 		this.owner = owner;
@@ -111,7 +111,7 @@ public class ItemBean
 		return this.owner;
 	}
 
-	// winerÊôÐÔµÄsetterºÍgetter·½·¨
+	// winerå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setWiner(String winer)
 	{
 		this.winer = winer;
@@ -121,7 +121,7 @@ public class ItemBean
 		return this.winer;
 	}
 
-	// stateÊôÐÔµÄsetterºÍgetter·½·¨
+	// stateå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setState(String state)
 	{
 		this.state = state;
@@ -131,7 +131,7 @@ public class ItemBean
 		return this.state;
 	}
 
-	// initPriceÊôÐÔµÄsetterºÍgetter·½·¨
+	// initPriceå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setInitPrice(double initPrice)
 	{
 		this.initPrice = initPrice;
@@ -141,7 +141,7 @@ public class ItemBean
 		return this.initPrice;
 	}
 
-	// maxPriceÊôÐÔµÄsetterºÍgetter·½·¨
+	// maxPriceå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setMaxPrice(double maxPrice)
 	{
 		this.maxPrice = maxPrice;
@@ -151,7 +151,7 @@ public class ItemBean
 		return this.maxPrice;
 	}
 
-	// addTimeÊôÐÔµÄsetterºÍgetter·½·¨
+	// addTimeå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setAddTime(Date addTime)
 	{
 		this.addTime = addTime;
@@ -161,7 +161,7 @@ public class ItemBean
 		return this.addTime;
 	}
 
-	// endTimeÊôÐÔµÄsetterºÍgetter·½·¨
+	// endTimeå±žæ€§çš„setterå’Œgetteræ–¹æ³•
 	public void setEndTime(Date endTime)
 	{
 		this.endTime = endTime;

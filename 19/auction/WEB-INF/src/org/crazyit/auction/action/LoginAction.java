@@ -9,7 +9,7 @@ import org.crazyit.auction.action.base.BaseAction;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -28,7 +28,7 @@ public class LoginAction extends BaseAction
 	{
 		Map session = ActionContext.getContext().getSession();
 		String ver2 = (String )session.get("rand");
-		// Çå¿ÕSessionÖĞµÄËæ»úÑéÖ¤Âë×Ö·û´®¡£
+		// æ¸…ç©ºSessionä¸­çš„éšæœºéªŒè¯ç å­—ç¬¦ä¸²ã€‚
 		session.put("rand" , null);
 		if (vercode.equals(ver2))
 		{
@@ -40,17 +40,17 @@ public class LoginAction extends BaseAction
 			}
 			else
 			{
-				addActionError("ÓÃ»§Ãû/ÃÜÂë²»Æ¥Åä");
+				addActionError("ç”¨æˆ·å/å¯†ç ä¸åŒ¹é…");
 				return "failure";
 			}
 		}
 		else
 		{
-			addActionError("ÑéÖ¤Âë²»Æ¥Åä,ÇëÖØĞÂÊäÈë");
+			addActionError("éªŒè¯ç ä¸åŒ¹é…,è¯·é‡æ–°è¾“å…¥");
 			return "failure";
 		}
 	}
-	// usernameµÄsetterºÍgetter·½·¨
+	// usernameçš„setterå’Œgetteræ–¹æ³•
 	public void setUsername(String username)
 	{
 		this.username = username;
@@ -60,7 +60,7 @@ public class LoginAction extends BaseAction
 		return this.username;
 	}
 
-	// passwordµÄsetterºÍgetter·½·¨
+	// passwordçš„setterå’Œgetteræ–¹æ³•
 	public void setPassword(String password)
 	{
 		this.password = password;
@@ -70,7 +70,7 @@ public class LoginAction extends BaseAction
 		return this.password;
 	}
 
-	// vercodeµÄsetterºÍgetter·½·¨
+	// vercodeçš„setterå’Œgetteræ–¹æ³•
 	public void setVercode(String vercode)
 	{
 		this.vercode = vercode;

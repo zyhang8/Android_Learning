@@ -11,7 +11,7 @@ import org.crazyit.auction.business.*;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2012, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -21,17 +21,17 @@ import org.crazyit.auction.business.*;
  */
 public class ViewDetailAction extends BaseActionInterface
 {
-	// ·â×°ÓÃ»§ÇëÇó²ÎÊıµÄÊôĞÔ
+	// å°è£…ç”¨æˆ·è¯·æ±‚å‚æ•°çš„å±æ€§
 	private int itemId;
 	private ItemBean item;
-	// ·â×°ÏµÍ³´íÎóÌáÊ¾µÄÊôĞÔ
+	// å°è£…ç³»ç»Ÿé”™è¯¯æç¤ºçš„å±æ€§
 	private String errMsg;
-	// ´¦ÀíÓÃ»§ÇëÇó
+	// å¤„ç†ç”¨æˆ·è¯·æ±‚
 	public String execute()throws Exception
 	{
 		if (itemId <= 0)
 		{
-			setErrMsg("ÄúÑ¡ÔñÎïÆ·ID²»ÊÇÒ»¸öÓĞĞ§µÄÎïÆ·ID£¡");
+			setErrMsg("æ‚¨é€‰æ‹©ç‰©å“IDä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„ç‰©å“IDï¼");
 			return ERROR;
 		}
 		else
@@ -41,33 +41,33 @@ public class ViewDetailAction extends BaseActionInterface
 		}
 	}
 
-	// itemIdµÄsetterºÍgetter·½·¨
+	// itemIdçš„setterå’Œgetteræ–¹æ³•
 	public void setItemId(int itemId)
 	{
 		this.itemId = itemId;
 	}
 	public int getItemId()
 	{
-		 return this.itemId;
+		return this.itemId;
 	}
 
-	// itemµÄsetterºÍgetter·½·¨
+	// itemçš„setterå’Œgetteræ–¹æ³•
 	public void setItem(ItemBean item)
 	{
 		this.item = item;
 	}
 	public ItemBean getItem()
 	{
-		 return this.item;
+		return this.item;
 	}
 
-	// errMsgµÄsetterºÍgetter·½·¨
+	// errMsgçš„setterå’Œgetteræ–¹æ³•
 	public void setErrMsg(String errMsg)
 	{
 		this.errMsg = errMsg;
 	}
 	public String getErrMsg()
 	{
-		 return this.errMsg;
+		return this.errMsg;
 	}
 }

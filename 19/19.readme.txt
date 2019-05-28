@@ -2,7 +2,7 @@
 1. 将mysql.sql脚本中的语句导入MySQL数据库。
 2. 修改auction\WEB-INF路径下的applicationContext.xml文件，
    将其中的数据库连接信息修改为你的数据库连接信息。
-3. 进入auction\WEB-INF路径下，启动DOS或shell窗口，输入：
+3. 进入auction\WEB-INF路径下，启动DOS或shEll窗口，输入：
    ant compile -- 该命令用于编译应用
 4. 将整个应用复制到%TOMCAT_HOME%/webapps路径（务必使用Tomcat 8.0.x版本）下，
    启动Tomcat服务器即可。

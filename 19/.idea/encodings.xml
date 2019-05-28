@@ -2,6 +2,60 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/19.readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/AddBidAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/AddItemAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/AddKindAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/LoginAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/MgrItemAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/MgrKindAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/ViewBidAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/ViewDetailAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/ViewFailAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/ViewItemAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/ViewItemAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/ViewKindAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/ViewSuAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/base/BaseAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/base/BaseActionInterface.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/action/interceptor/AuthorityInterceptor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/business/BidBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/business/ItemBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/business/KindBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/AuctionUserDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/BidDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/ItemDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/KindDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/StateDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/impl/AuctionUserDaoHibernate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/impl/BidDaoHibernate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/impl/ItemDaoHibernate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/impl/KindDaoHibernate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/dao/impl/StateDaoHibernate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/domain/AuctionUser.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/domain/Bid.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/domain/Item.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/domain/Kind.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/domain/State.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/exception/AuctionException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/schedule/CheckWiner.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/service/AuctionManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/service/impl/AuctionManagerImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/AddBidServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/AddItemServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/AddKindServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/Authority.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/GetItemServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/ItemListServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/LoginServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/ViewBidServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/ViewFailServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/ViewKindServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/ViewOwnerItemServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/ViewSuccServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/servlet/base/BaseServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/auction/web/AuthImg.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/common/dao/BaseDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auction/WEB-INF/src/org/crazyit/common/dao/impl/BaseDaoHibernate4.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mysql.sql" charset="GBK" />
   </component>
 </project>

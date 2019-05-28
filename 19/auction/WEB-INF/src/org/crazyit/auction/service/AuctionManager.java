@@ -9,7 +9,7 @@ import org.crazyit.auction.exception.AuctionException;
 
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2016, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -20,101 +20,101 @@ import org.crazyit.auction.exception.AuctionException;
 public interface AuctionManager
 {
 	/**
-	 * ¸ù¾İÓ®È¡Õß²éÑ¯ÎïÆ·
-	 * @param winerId Ó®È¡ÕßµÄID
-	 * @return Ó®È¡Õß»ñµÃµÄÈ«²¿ÎïÆ·
+	 * æ ¹æ®èµ¢å–è€…æŸ¥è¯¢ç‰©å“
+	 * @param winerId èµ¢å–è€…çš„ID
+	 * @return èµ¢å–è€…è·å¾—çš„å…¨éƒ¨ç‰©å“
 	 */
 	List<ItemBean> getItemByWiner(Integer winerId)
-		throws AuctionException;
+			throws AuctionException;
 
 	/**
-	 * ²éÑ¯Á÷ÅÄµÄÈ«²¿ÎïÆ·
-	 * @return È«²¿Á÷ÅÄÎïÆ·
+	 * æŸ¥è¯¢æµæ‹çš„å…¨éƒ¨ç‰©å“
+	 * @return å…¨éƒ¨æµæ‹ç‰©å“
 	 */
 	List<ItemBean> getFailItems()throws AuctionException;
 
 	/**
-	 * ¸ù¾İÓÃ»§Ãû£¬ÃÜÂëÑéÖ¤µÇÂ¼ÊÇ·ñ³É¹¦
-	 * @param username µÇÂ¼µÄÓÃ»§Ãû
- 	 * @param pass µÇÂ¼µÄÃÜÂë
-	 * @return µÇÂ¼³É¹¦·µ»ØÓÃ»§ID£¬·ñÔò·µ»Ø-1
+	 * æ ¹æ®ç”¨æˆ·åï¼Œå¯†ç éªŒè¯ç™»å½•æ˜¯å¦æˆåŠŸ
+	 * @param username ç™»å½•çš„ç”¨æˆ·å
+	 * @param pass ç™»å½•çš„å¯†ç 
+	 * @return ç™»å½•æˆåŠŸè¿”å›ç”¨æˆ·IDï¼Œå¦åˆ™è¿”å›-1
 	 */
 	int validLogin(String username , String pass)
-		throws AuctionException;
+			throws AuctionException;
 
 	/**
-	 * ²éÑ¯ÓÃ»§µÄÈ«²¿³ö¼Û
-	 * @param userId ¾º¼ÛÓÃ»§µÄID
-	 * @return ÓÃ»§µÄÈ«²¿³ö¼Û
+	 * æŸ¥è¯¢ç”¨æˆ·çš„å…¨éƒ¨å‡ºä»·
+	 * @param userId ç«ä»·ç”¨æˆ·çš„ID
+	 * @return ç”¨æˆ·çš„å…¨éƒ¨å‡ºä»·
 	 */
 	List<BidBean> getBidByUser(Integer userId)
-		throws AuctionException;
+			throws AuctionException;
 
 	/**
-	 * ¸ù¾İÓÃ»§²éÕÒÄ¿Ç°ÈÔÔÚÅÄÂôÖĞµÄÈ«²¿ÎïÆ·
-	 * @param userId ËùÊôÕßµÄID
-	 * @return ÊôÓÚµ±Ç°ÓÃ»§µÄ¡¢´¦ÓÚÅÄÂôÖĞµÄÈ«²¿ÎïÆ·¡£
+	 * æ ¹æ®ç”¨æˆ·æŸ¥æ‰¾ç›®å‰ä»åœ¨æ‹å–ä¸­çš„å…¨éƒ¨ç‰©å“
+	 * @param userId æ‰€å±è€…çš„ID
+	 * @return å±äºå½“å‰ç”¨æˆ·çš„ã€å¤„äºæ‹å–ä¸­çš„å…¨éƒ¨ç‰©å“ã€‚
 	 */
 	List<ItemBean> getItemsByOwner(Integer userId)
-		throws AuctionException;
+			throws AuctionException;
 
 	/**
-	 * ²éÑ¯È«²¿ÖÖÀà
-	 * @return ÏµÍ³ÖĞÈ«²¿È«²¿ÖÖÀà
+	 * æŸ¥è¯¢å…¨éƒ¨ç§ç±»
+	 * @return ç³»ç»Ÿä¸­å…¨éƒ¨å…¨éƒ¨ç§ç±»
 	 */
 	List<KindBean> getAllKind() throws AuctionException;
 
 	/**
-	 * Ìí¼ÓÎïÆ·
-	 * @param item ĞÂÔöµÄÎïÆ·
-	 * @param avail ÓĞĞ§ÌìÊı
-	 * @param kindId ÎïÆ·ÖÖÀàID
-	 * @param userId Ìí¼ÓÕßµÄID
-	 * @return ĞÂÔöÎïÆ·µÄÖ÷¼ü
+	 * æ·»åŠ ç‰©å“
+	 * @param item æ–°å¢çš„ç‰©å“
+	 * @param avail æœ‰æ•ˆå¤©æ•°
+	 * @param kindId ç‰©å“ç§ç±»ID
+	 * @param userId æ·»åŠ è€…çš„ID
+	 * @return æ–°å¢ç‰©å“çš„ä¸»é”®
 	 */
 	int addItem(Item item, int avail , int kindId , Integer userId)
-		throws AuctionException;
+			throws AuctionException;
 
 	/**
-	 * Ìí¼ÓÖÖÀà
-	 * @param kind ĞÂÔöµÄÖÖÀà
-	 * @return ĞÂÔöÖÖÀàµÄÖ÷¼ü
+	 * æ·»åŠ ç§ç±»
+	 * @param kind æ–°å¢çš„ç§ç±»
+	 * @return æ–°å¢ç§ç±»çš„ä¸»é”®
 	 */
 	int addKind(Kind kind) throws AuctionException;
 
 	/**
-	 * ¸ù¾İ²úÆ··ÖÀà£¬»ñÈ¡´¦ÓÚÅÄÂôÖĞµÄÈ«²¿ÎïÆ·
-	 * @param kindId ÖÖÀàid;
-	 * @return ¸ÃÀàµÄÈ«²¿²úÆ·
+	 * æ ¹æ®äº§å“åˆ†ç±»ï¼Œè·å–å¤„äºæ‹å–ä¸­çš„å…¨éƒ¨ç‰©å“
+	 * @param kindId ç§ç±»id;
+	 * @return è¯¥ç±»çš„å…¨éƒ¨äº§å“
 	 */
 	List<ItemBean> getItemsByKind(int kindId) throws AuctionException;
 
 	/**
-	 * ¸ù¾İÖÖÀàid»ñÈ¡ÖÖÀàÃû
-	 * @param kindId ÖÖÀàid;
-	 * @return ¸ÃÖÖÀàµÄÃû³Æ
+	 * æ ¹æ®ç§ç±»idè·å–ç§ç±»å
+	 * @param kindId ç§ç±»id;
+	 * @return è¯¥ç§ç±»çš„åç§°
 	 */
 	String getKind(int kindId) throws AuctionException;
 
 	/**
-	 * ¸ù¾İÎïÆ·id£¬»ñÈ¡ÎïÆ·
-	 * @param itemId ÎïÆ·id;
-	 * @return Ö¸¶¨id¶ÔÓ¦µÄÎïÆ·
+	 * æ ¹æ®ç‰©å“idï¼Œè·å–ç‰©å“
+	 * @param itemId ç‰©å“id;
+	 * @return æŒ‡å®šidå¯¹åº”çš„ç‰©å“
 	 */
 	ItemBean getItem(int itemId) throws AuctionException;
 
 	/**
-	 * Ôö¼ÓĞÂµÄ¾º¼Û£¬²¢¶Ô¾º¼ÛÓÃ»§·¢ÓÊ¼şÍ¨Öª
-	 * @param itemId ÎïÆ·id;
-	 * @param bid ¾º¼Û
-	 * @param userId ¾º¼ÛÓÃ»§µÄID
-	 * @return ·µ»ØĞÂÔö¾º¼Û¼ÇÂ¼µÄID
+	 * å¢åŠ æ–°çš„ç«ä»·ï¼Œå¹¶å¯¹ç«ä»·ç”¨æˆ·å‘é‚®ä»¶é€šçŸ¥
+	 * @param itemId ç‰©å“id;
+	 * @param bid ç«ä»·
+	 * @param userId ç«ä»·ç”¨æˆ·çš„ID
+	 * @return è¿”å›æ–°å¢ç«ä»·è®°å½•çš„ID
 	 */
 	int addBid(int itemId , Bid bid ,Integer userId)
-		throws AuctionException;
+			throws AuctionException;
 
 	/**
-	 * ¸ù¾İÊ±¼äÀ´ĞŞ¸ÄÎïÆ·µÄÓ®È¡Õß
+	 * æ ¹æ®æ—¶é—´æ¥ä¿®æ”¹ç‰©å“çš„èµ¢å–è€…
 	 */
 	void updateWiner()throws AuctionException;
 }
